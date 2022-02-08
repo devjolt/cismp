@@ -1,9 +1,9 @@
-from cismp.utilities import utilties as utl
-
+from cismp.utilities import utilities as utl
+from ._6_logic import *
 
 
 questions = {
-    'rings of security':rings_of_security(),
+    'rings of security':rings_of_security,
     'types of virus': {
         'question_with_0':'What best describes a PLACEHOLDER virus?',
         'question_with_1':'What type of virus PLACEHOLDER?',
@@ -30,7 +30,7 @@ questions = {
         'pairs':(
             ('virus',['requires user interaction', 'doesn\'t self propogate', 'requires a host']),
             ('worm',['self replicates without a triggering event', 'propogates itself through a network', 'can be uses to distribute viruses', 'can be uses to distribute lobic bombs']),
-            ('trojan',['downloaded by a user as part of a desired piece of code', 'disguised as something legitimate', f'is introduced through {utl.pick_one(['illegal downloads', 'games', 'screensavers','system softeware']), 'used to install DDoS Zombies/Bots']),
+            ('trojan',['downloaded by a user as part of a desired piece of code', 'disguised as something legitimate', f"is introduced through {utl.pick_one(['illegal downloads', 'games', 'screensavers','system softeware'])}", 'used to install DDoS Zombies/Bots']),
             ('rootkit',['works beneath the level at which tools used to detect viruses operate', 'operates at the kernel level', 'may be detected using heuristics']), 
             ('back door',['also called a trap door', 'may be installed legitaimnately into code', 'may be installed maliciously through trojan, virus, code download or manually', 'enables remote access clients']),
             ('spyware',['gathers data from your machine using your machine\'s resources', 'may be used in identity theft', 'associated with key logging']),
@@ -50,23 +50,23 @@ questions = {
         'type':'pairs',
         'course_code':'6',
         'pairs':(
-            (['man in the middle','MitM'],[f'involves {utl.pick_one(['spoofing', 'poisoning'])} name resolution systems', f'may involve {utl.pick_one(['spoofing', 'poisoning'])} {utl.pick_one(['DNS', 'domain name server', 'ARP', 'NetBios','WINS'])}']),
+            (['man in the middle','MitM'],[f"involves {utl.pick_one(['spoofing', 'poisoning'])} name resolution systems", f"may involve {utl.pick_one(['spoofing', 'poisoning'])} {utl.pick_one(['DNS', 'domain name server', 'ARP', 'NetBios','WINS'])}"]),
             (['DoS', 'DDos'],['involves flooding an address with messages', 'overwhelming an address with requests']),
-            ('spoofing', ['falsifying network data to undermine a system', f'may be used for {utl.pick_one(['replay attacks', 'SPAM', 'WAP attacks'])}']),
-            ('spam'),
+            ('spoofing', ['falsifying network data to undermine a system', f"may be used for {utl.pick_one(['replay attacks', 'SPAM', 'WAP attacks'])}"]),
+            ('spam', 'sending unsolicited communication'),
             ('spim', 'using SMS services to get people to displose their data'),
             ('phishing', 'using emails to get people to displose their data'),
             ('spear phishing', 'targeting specific individuals with emails designed to get data'),
             ('whaling','targeting people in positions of respnonsibility with fake emails to get data'),
             ('vishing', 'using voice calls under false pretences to get users to disclose data'),
-            ('pharming', 'malicious redirects of websites to fake sites in order to conduct Phishing attacks')
-            ('DNS poisoning', ['falsifying domain name service data', 'can be used to redirect to malicious sites]')
-            ('ARP posoning', ['falsify IP-mac resolution', 'ommonly used in active sniffing attacks and matn in the middle attacks'])
-            ('insider', f'can be protected against by {utl.pick_one(['policies', 'auditing', 'background checks', 'prhibiting external devices', 'application whitelisting'])}')
-            ('password', [f'can be protected against using {utl.pick_one(['longer', 'complex', 'regularly updated'])} passwords','brute force', 'dictionary attack', 'birthday attack', 'rainbow attack'] )
+            ('pharming', 'malicious redirects of websites to fake sites in order to conduct Phishing attacks'),
+            ('DNS poisoning', ['falsifying domain name service data', 'can be used to redirect to malicious sites']),
+            ('ARP posoning', ['falsify IP-mac resolution', 'ommonly used in active sniffing attacks and matn in the middle attacks']),
+            ('insider', f"can be protected against by {utl.pick_one(['policies', 'auditing', 'background checks', 'prhibiting external devices', 'application whitelisting'])}"),
+            ('password', [f"can be protected against using {utl.pick_one(['longer', 'complex', 'regularly updated'])}",'passwords','brute force', 'dictionary attack', 'birthday attack', 'rainbow attack'] ),
             ('transitive access', 'sharing data with someone on the basis that they are trusted by someone you trust' ),
             (['url hacking','typo squatting'], 'using commonly misspelt urls to lure people onto a malicious site'),
-            ('social engineering', ['exploiting human nature', f'using {utl.pick_one(['authority', 'intimidation', 'scarcity', 'urgency', 'familiarity', 'trust', 'flattery'])} to gain access or information']),
+            ('social engineering', ['exploiting human nature', f"using {utl.pick_one(['authority', 'intimidation', 'scarcity', 'urgency', 'familiarity', 'trust', 'flattery'])} to gain access or information"]),
             ('watering hole attack', 'observing users\' behaviour to lure them to a malicious site'),
     
         ),
@@ -89,20 +89,6 @@ questions = {
         )
     },
 
-    'types of spoofing attacks': {
-        'question_with_0':'What best describes a PLACEHOLDER?',
-        'question_with_1':'What type of malware PLACEHOLDER?',
-        'type':'pairs',
-        'course_code':'6',
-        'pairs':(
-            (['DoS', 'DDoS'],'using packets agains the broadcast address so the replies return to the victim'),
-            ('SPAM','UDP packets used so the ICMP reply returns to the victum'),
-            ('WAP attack',[]),
-            
-        ),
-        'fillers': (
-        )
-    },
     'types of password attacks': {
         'question_with_0':'What best describes a PLACEHOLDER?',
         'question_with_1':'What type of attack involves PLACEHOLDER?',
@@ -195,6 +181,22 @@ unnauthorised access
 
 risks from instant messaging
 
+
+
+    'types of spoofing attacks': {
+        'question_with_0':'What best describes a PLACEHOLDER?',
+        'question_with_1':'What type of malware PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'6',
+        'pairs':(
+            (['DoS', 'DDoS'],'using packets agains the broadcast address so the replies return to the victim'),
+            ('SPAM','UDP packets used so the ICMP reply returns to the victum'),
+            ('WAP attack',[]),
+            
+        ),
+        'fillers': (
+        )
+    },
 
 """
 
