@@ -6,7 +6,7 @@ from .views import HomeView, RandomModuleView
 
 urlpatterns = [
     path('', HomeView.as_view(), name='cismp_home'),
-    path('random/', RandomModuleView.as_view(modules = (_1, _3, _4, _5, _6, _7, _8)), name = 'all_random'),
+    path('random/', RandomModuleView.as_view(modules = (_3, _4, _5, _6, _7, _8)), name = 'all_random'),
     #path('information_security_principles/', RandomModuleView.as_view(modules = (_1,)), name = 'information_security_principles'),
     #path('information_risk/', RandomModuleView.as_view(modules = (_2,)), name = 'rest_api'),
     path('information_security_frameworks/', RandomModuleView.as_view(modules = (_3,)), name = 'information_security_frameworks'),

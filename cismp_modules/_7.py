@@ -21,10 +21,10 @@ questions = {
     
     },
     'physical security true false': {
-        'question':'Regarding physical security, which of the following PLACEHOLDER describe good practise?',
+        'question':'Regarding physical security, which of the following PLACEHOLDER  good practise?',
         'type':'correct incorrect',
-        'positive':'does',
-        'negative':'does not',
+        'positive':'describes',
+        'negative':'does not describe',
         'course_code':'',
         'correct':(
             'often the most cost effective',

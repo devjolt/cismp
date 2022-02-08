@@ -198,7 +198,7 @@ questions = {
         ('off the shelf products do not contain bugs'),
         ('security updates should be regarded with suspicion'),
         ('security updates should be skipped in favour of thorough testing'),
-        ('products from unreputable vendors can be fine if properly tested'),
+        ('products from unreputable vendors are be fine if properly tested'),
         ('purchasing pirated products may result in prosecution under GDPR')
     )
     },
