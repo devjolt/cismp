@@ -33,10 +33,17 @@
                 
             }
             h1{
-                color:rgb(52, 52, 82);
+                color:var(--second-dark);
+                margin:6vw;
+                margin-top:0.5vw;
+                margin-bottom:0.5vw;
                 
             }
 
+            h3{
+                text-align: left;
+                margin-left:3vw;
+            }
             a{
                 text-decoration:none;
                 color:rgb(52, 52, 82);
@@ -46,13 +53,13 @@
                 transition:0.5s;
             }
 
-
-            
             .header{
                 display: grid;
                 grid-template-columns: auto 80% auto;
                 text-align: center; 
                 height:10vh;
+                
+                
             }
             .header-logo{
                 width:min-content;
@@ -65,12 +72,17 @@
             }  
 
             .introduction{
+                
                 padding:2%;
-                margin:2%;
+                margin-top:1%;
                 text-align: left;
-                max-width:50vw;
+                
                 margin-left: auto;
                 margin-right: auto;
+            }
+
+            .introduction-box{
+                width:50%;
             }
 
             .main{
@@ -78,52 +90,51 @@
                 padding:1%;
             }
             .main-inner{
-                margin:3vw;
+                margin:5vw;
+                margin-top:1vw;
                 background-color:var(--third-light);
                 border-style:solid;
                 border-radius: 10px;  
                 border-color:var(--third-light);           
             }
             
-            .certification-container{
+            .module-container{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content:center;
                 margin:2vw;
+                margin-top:0.5vw;
                 padding:2vw;
+                padding-top:0.5vw;
+                text-align: center;
+                vertical-align: middle;
             }
+            .module-button{
+            } 
 
-            .inactive-container{
+            .module{
                 border-style:solid;
                 border-radius: 10px;
                 border-color: var(--first-light);
                 height:5em;
                 width:16em;
-                padding-top: 2vh;
+                padding:10px;
                 margin:4px;
-                text-align: center;
-                vertical-align: middle;
+                vertical-align: middle; 
+                text-align: center; 
                 transition:0.5s;
+            }
+
+            .inactive{
                 background-color: var(--first-light);
             }
 
-            .module-container{
-                
-                border-style:solid;
-                border-radius: 10px;
-                border-color: var(--first-light);
-                height:5em;
-                width:16em;
-                padding-top: 2vh;
-                margin:4px;
-                text-align: center;
-                vertical-align: middle;
+            .active{
                 transition:0.5s;
                 background-color: var(--third-light);
-                
             }
             
-            .module-container:hover{
+            .active:hover{
                 color: var(--third-light);
                 transform: scale(1.1) translate(0%, 3%);
                 background-image: linear-gradient(to bottom right, var(--second-light), var(--first-dark));
@@ -288,13 +299,15 @@
     </head>
 
     <body>
-
+        <h1>Certificate in Information Security Management Principles Practise</h1>
+        <!--
         <div class = 'header'>
             <div class = 'header-logo'>CISMP Practise</div>
+            
             <div class = 'header-info'>Current Module</div>
-            <div class ='header-right'>Right hand icons</div>    
+            <div class ='header-right'>Right hand icons</div>
         </div>
-
+        -->
         <div class = 'main'>
             <div class='main-inner'>
                 {% block content %}

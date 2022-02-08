@@ -148,7 +148,7 @@ questions = {
         ),
     },
     'true false security involvement in system and product assessment': {
-        'question':'Considering security involvement in system and product assessment, Which of the following is PLACEHOLDER?',
+        'question':'When considering security in system and product assessment, which of the following is PLACEHOLDER?',
         'type':'correct incorrect',
         'positive':'correct',
         'negative':'incorrect',

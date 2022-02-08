@@ -10,7 +10,6 @@ def information_lifecycle_in_order():
     decide whether most-least or least-most
     """
     item_id=1
-    order='least to most' if randint(0,1)==0 else 'most to least'
     question=[
         {'text':f'What is the correct order of the stages in the information life cycle?'}
     ]

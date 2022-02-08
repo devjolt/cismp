@@ -527,7 +527,7 @@ def generic_correct_order(num_choices, question_text, ascending_order, descendin
     item_id=1
     order= ascending_order if randint(0,1)==0 else descending_order
     
-    question_text=re.sub('ORDER', order, question_text)
+    question_text=re.sub('PLACEHOLDER', order, question_text)
     question=[
         {'text':question_text}
     ]
@@ -542,5 +542,6 @@ def generic_correct_order(num_choices, question_text, ascending_order, descendin
             used.append(new_str)
             item_id+=1
             items.append({'item':new_str, 'indicator':'incorrect', 'id':f'item{item_id}'})
+    shuffle(items)
     shuffle(items)
     return question, items

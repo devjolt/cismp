@@ -33,6 +33,7 @@ class RandomModuleView(TemplateView):
         #key = 'sqlite_find_the_line'
         if type(module.questions[key]) == dict:#else, run standard stuff to generate question from:
             question_dict = module.questions[key]
+            print(key)
             #try all the question types from most to least likely...
             #correct/incorrect, pairs, pairs code, correct/incorrect code
             if 'positive' in question_dict:
