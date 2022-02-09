@@ -338,20 +338,77 @@ questions = {
             (['captcha','type 4', 'type 0'], make_single_factor()),########custom question
         )
     },
+
+
+'controls': {
+        'question_with_0':'Which of the following is true of PLACEHOLDER?',
+        'question_with_1':'What type of control does the following describe PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'',
+        'pairs':(
+            (['DAC','discressionary access control'], ['set arbitrarily','used in commercial settings']),
+            (['role based', 'RBAC'], ['easiest to administer','most convenient to administer']),
+            (['mandatory control','MAC'], ['set by head office', 'used in government settings', 'used in military settings']),
+        ),
+        
+        'fillers': (
+            (['captcha','type 4', 'type 0'],['most expensive', 'favoured by sporting organisations', 'only works in industrial settings', 'only works in commercial settings', 'only works in goverment settings', 'only works in miliary settings']),
+        )
+    },
+
+    'software development lifecycle': {
+        'question_with_0':'Which of the following would be considered at the PLACEHOLDER stage of the software development lifecycle?',
+        'question_with_1':'What type of control is the following: PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'',
+        'pairs':(
+            ('requirements and security', ['legal aspects','regulations','contracts']), 
+            ('specification', ['selecting authenitication layers','considering security to be build','key','NFC token', 'something you have']),
+            ('design', ['diagram of architecture', 'sketch of architecture']),
+            (['aquisition', 'development'], 'considering the build and security'),
+            ('testing', ['black box','white box','grey box','unit testing','integrated testing','functional testing','system testing', 'alpha testing', 'beta testing']),
+            ('implementation', ['configuration for security', 'baselining']),
+            ('maintenance', ['patching', 'updates'])
+        ),
+        
+        'fillers': (
+            (['sales', 'marketing'], ['arpa testing', 'yellow box testing', 'red box testing', 'dns testing'])
+        )
+    },
 }
+
 '''
-which of the following is an exampple of...
-type1 false rejection
-and
-type2 false acceptance
+    'acceptance testing': {
+    'question':'Who should be involve in acceptance testing?',
+    'type':'correct incorrect',
+    'positive':'',
+    'course_code':'',
+    'correct':(
+        'all '
+    ),
+    'incorrect':(
+        'GDPR', 'top secret', 'ISO27001', 'ISO27002', 'receptionist', 'security guard', 'laptop lock', 'firewall', 'static MAC address', 'dynamic IP'
+    )
+    },
 
-authorisation:
-access control
-discretioinary access control DAC - commercial settings, set arbitrarily
-role based access control RBAC easiest to administer
-manatory control MAC - set by head office - government and military
-permissions
 
+
+}
+
+'true false software development': {
+        'question':'Considering the software development lifecycle, which of the following is PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'correct',
+        'negative':'incorrect',
+        'course_code':'',
+        'correct':(
+            
+                
+        ),
+        'incorrect': (
+        ),
+    },
+}
 
 permissions
 permissions at the file, folder level
@@ -362,23 +419,12 @@ permissions may be implicit
 permissions may be explicit
 can be set to read, write, 
 
-
-
-
-
 need to know and hold principle
 principle of least privilege - only giving as much access to people as they need to satisfy their function
 classification of data - categorising data as 
 handling caveats - rules about what can be done with the data can be included in the accpetable use policy
 aplies to all types of media
 applies to waste material
-
-'''
-
-
-
-"""
-pairs
 
 why are people the weakest link?
 you can't socially engineer a machine
@@ -394,9 +440,52 @@ policy should use
 categories
 Which categories should x document have
 
-How would you go about making a policy?
+defence against unauthorised access
+only vaild and accurate data is processed
+proper functional testing
+backups - 
+assurance of availability - a par of the application failing
+comp[liace - legal aspects
+security of data transmision/communications - 
+auditiing and recording
 
-    
-"""
+who should be involved in acceptance testing?
+project team
+end users
+managers
+asurance team
+acreditation team
 
+changes to software must be formally manage to ensure the following:
+benefits of the requested change
+risk
+accepted downtime
+development time
+training needs
+recording changes
 
+'true false changes to software': {
+        'question':'Considering the software development lifecycle, which of the following is PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'true',
+        'negative':'false',
+        'course_code':'',
+        'correct':(
+            '3rd parties going out of buisness can be mitigated using Escrow',
+            '3rd parties changing hands',
+            'trade secrets can be protected through the data protection act',
+            'intellectial property can be protected through the data protection act',
+            'rogue code can be mitigated though testing',
+            'trade secrets can be protected with NDAs',        
+            'when making changes to software'
+        ),
+        'incorrect': (
+            '',
+            '',
+            '',
+            '',
+            '',
+
+        ),
+    },
+'''

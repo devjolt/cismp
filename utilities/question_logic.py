@@ -545,3 +545,6 @@ def generic_correct_order(num_choices, question_text, ascending_order, descendin
     shuffle(items)
     shuffle(items)
     return question, items
+
+def generic_pick_from_list(num_choices, len_lists, correct_list, incorrect_list):
+    pass

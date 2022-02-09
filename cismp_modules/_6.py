@@ -68,7 +68,6 @@ questions = {
             (['url hacking','typo squatting'], 'using commonly misspelt urls to lure people onto a malicious site'),
             ('social engineering', ['exploiting human nature', f"using {utl.pick_one(['authority', 'intimidation', 'scarcity', 'urgency', 'familiarity', 'trust', 'flattery'])} to gain access or information"]),
             ('watering hole attack', 'observing users\' behaviour to lure them to a malicious site'),
-    
         ),
         'fillers': (
         )
@@ -118,10 +117,149 @@ questions = {
         'fillers': (
         )
     },
+    'types of password attacks': {
+        'question_with_0':'Which of the following is a PLACHOLDER exploit?',
+        'question_with_1':'What type of exploit is PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'6',
+        'pairs':(
+            ('DNS',['rogue DNS server']),
+            ('rainbow','using large pre-calculated databased of hashes to crack captured password hashes'),
+            ('dictionary','attempts to break passwords based on a dictionary or list of words'),
+            ('birthday attack','based on probability theory'), 
+        ),
+        'fillers': (
+        )
+    },
+    'types of network design elements': {
+        'question_with_0':'Which of the following describes PLACHOLDER?',
+        'question_with_1':'Which design element is a PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'6',
+        'pairs':(
+            (['a VLAN', 'virtualisation', 'a virtual network'],['segmenting switch ports on managed devices (layer 2) and allocating to diferent networks','allows to networks to remain seperate from each other whilst sharing other access to resources','traffic between each department is controlled through the switch and router']),
+            (['a DMZ', 'a transitional subnet'],['acts as a buffer network between the internet and a private LAN', 'implemented between 2 firewalls', 'implemented between a multi honed device']),
+            (['Honeypot','Honeynet'],['used to monitor intrusion and conduct intelligence gathering', 'used to deflect potential attacks', 'located in the DMZ', 'located in a transitional subnet']),
+            (['IDS', 'intrusion detection system'], ['passive devices which detect malicious traffic', 'passive devices', 'can be host based to monitor local activity']),
+            ('load balancers', ['provide fault tolerance', 'provide redundancy', 'support web servers', 'support remote desktop servers','support FTP servers','support VPN servers']),
+            (['network address translation','NAT'], ['converts internal IP addresses into public', 'masquerades internal addressing systems from public viewing', 'serves as a basic firewall']),
+            (['port address translation','PAT'], ['connect single internal IP addresses to internal port numbers']),
+            (['network address translation transversal','NAT-T'], ['supports IPSEC', 'supports other tunnelling VPN protocols','allow IPv4-6 networks to used NAT in interim between becoming mainstream']),
+            (['proxy servers'], ['caching NAT service', 'can filter activity based on content', 'can filter activity based on URL','can filter activity based on keywords']),
+            (['remote access servers', 'RAS'], 'support VPN/Terminal Service connections'),
+            (['NAC', 'network access control'],['examines the connecting device', 'reduces day zero attacks', 'enforces network security policies','device or software which can perform firewall, antivirus, updates and identity functions'])
+        ),
+        'fillers': (
+        )
+    },
+    'types of IDS': {
+        'question_with_0':'Which of the following describes PLACHOLDER?',
+        'question_with_1':'Which design element is a PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'6',
+        'pairs':(
+            ('signature based IDS','has a database of signatures of known malicious traffic'),
+            ('anomaly based IDS',['can be trained to know what is normal traffic', 'raises an aler when diferent traffic patterns are seen']),
+            ('behaviour based IDS','reacts to activity above or below baseline activity'),
+            ('heuristics', 'the ability to make an educated guess as to whether traffic is malicious or not'),
+        ),
+        'fillers': (
+        )
+    },
+        
+    'cloud computing types': {
+        'question_with_0':'Which of the following describes PLACEHOLDER cloud use?',
+        'question_with_1':'Which operational control is PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'5',
+        'pairs':(
+            ('public', ['on-demand computing services and infrastructure are managed by a third-party provider and shared with multiple organizations', 'on-demand computing services and infrastructure using the public Internet']),
+            ('private', ['a cloud computing environment in which all hardware and software resources are dedicated exclusively to, and accessible only by, a single customer']),
+            ('community', ['used and paid for a group of users','used by a group of users for shared benefit','suitabile for data exchange']),
+            ('hybrid', ['combination of cloud and on-site infrastructure']),
+        ),
+        'fillers': (
+            (),           
+        )
+   
+    },
+    
+    'cloud computing services': {
+        'question_with_0':'Which of the following describes PLACEHOLDER?',
+        'question_with_1':'Which is the term given used to describe providing PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'10',
+        'pairs':(
+            ('sofware as a service', 'software is accessed online via a subscription','software does not need to be bought and installed on individual computers'),
+            ('platform as a service', ['provision of an environment in which to develop code', 'provision of a computing environment and some applications']),
+            ('storage as a service', ['providing storage on a rental basis by a provider']),
+            ('security as a service', ['providing security on a subscription model']),
+            ('monitoring as a service', ['providing monitoring on a subscription model']),
+            ('infrastructure as a service', ['a cloud computing service that offers essential compute, storage and networking resources on demand']),
+        ),
+        'fillers': (
+            (['network as a service', 'prevention as a service', 'elasticity as a service', 'scalability as a service'], [
+                'purchasing software to download and install locally',
+                'buying computers with a pre-installed development platform',
+                'installing custom-made architecture on site',
+                'training staff to provide local security',
+                'purchasing monitoring software and hardware and training staff to use them',
+                f"{utl.pick_one(['software', 'security', 'platform', 'storage', 'monitoring', 'infrastructure'])} in the cloud",
+                f"{utl.pick_one(['software', 'security', 'platform', 'storage', 'monitoring', 'infrastructure'])} as a package"]
+                ),
+            
+        )
+    }
+    
 }
+
+"""
+how is data stores for GDPR
+where is data stored
+responsibilities 
+availability
+data retention and destruction
+backups/replication
+auditing
+exit strategy
+
+
+CSA
+
+cloud control matric and caiq
+"""
 
 
 """
+seperation of systems
+physical seperation of systems - 
+logical seperation of systems, virtualisation
+firewalls
+DMZ area of known trust
+intrusion detection system
+intrusion prevention system
+load balancer proxies
+noneypots
+honeynets
+load balancer
+proxies
+
+security layers
+data - checksums
+application - malware detection
+host - 
+internal - 
+perimeter
+physical - doors, fences
+awareness
+proceedures
+policies
+
+seperation may take many forms and may be incorporated:
+to gement a secure compartment facility (standalone or controlled access)
+zone specific security areas
+to zone vulnerable areas from the internal network
+to control network traffic between departments
 
 DNS
 exploits
@@ -131,13 +269,10 @@ SND poisoning
 IP configuration corruption
 proxy corruption
 
-
 shoulder surfing - looking over someone's shoulder
 dumpster diving
 hoax emails
 impersonation
-
-
 
 rogue access points
 evil twin same ssid
@@ -146,7 +281,6 @@ war driving using monitoring software to look for the presence of wireless netwo
 war chalking
 bluejacking
 bluesnarfing
-
 
 wireless attacks
 xss/cross site scripting - exploits trust a browser has with the web server
@@ -293,7 +427,6 @@ white box testing - full knowledge, network diagram, full access
 
 what type of penetration testing would give you the best idea of your security posture?
 black box
-
 
 """
 

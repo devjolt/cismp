@@ -85,6 +85,9 @@ questions = {
 }
 
 """
+
+redundant array of indipendant disks
+
 risk assessment allows you to prioritise areas more at risk
 consider system redundancey
 
