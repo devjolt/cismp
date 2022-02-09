@@ -104,11 +104,25 @@ questions = {
         )
     },
     
-
+    'types of password attacks': {
+        'question_with_0':'Which of the following is a PLACHOLDER exploit?',
+        'question_with_1':'What type of exploit is PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'6',
+        'pairs':(
+            ('DNS',['rogue DNS server']),
+            ('rainbow','using large pre-calculated databased of hashes to crack captured password hashes'),
+            ('dictionary','attempts to break passwords based on a dictionary or list of words'),
+            ('birthday attack','based on probability theory'), 
+        ),
+        'fillers': (
+        )
+    },
 }
 
 
 """
+
 DNS
 exploits
 
@@ -122,6 +136,8 @@ shoulder surfing - looking over someone's shoulder
 dumpster diving
 hoax emails
 impersonation
+
+
 
 rogue access points
 evil twin same ssid
@@ -197,6 +213,87 @@ risks from instant messaging
         'fillers': (
         )
     },
+
+
+
+countermeasures to web-activity hacking
+user training
+acceptable use policy
+access controlls
+authentication
+enmcryption
+pen testing
+
+
+malware countermeasures
+user training and awareness
+content scanning
+checking software
+firewall
+sheep dip software
+networ intrusion detection systenms / intrusion prevention system (NIDS/NIPS)
+
+
+what is checking software vs sheep dip
+
+
+system logs
+
+event logs - on an ms system these cover all aspects of the systems but the most important logs are
+security logs
+system lohs
+application log
+access logs
+
+audit logs - log user/machine activity such as logons, object access and special privilege actions
+
+SIEM vs UTM
+SIEM is a detective control
+unified thread managements is a control but also 
+
+
+hardenning is conducted at OS, system, network and application level
+
+all systems should have unnecessary systems removed
+
+
+a security posture is the level at which an organisation canwithstand an attack
+baselines should be taken of all it systems after hardeiung
+continues  monitoring always on
+
+assessment tools
+
+pair
+
+protocol analyser/sniffer - wireshark
+vulnerability scanners - nessus
+ids/honeypots/honeynets
+port scanners
+
+VIPD is identifying vulnerabilities
+pen-testing is exploiting vulnerabilities
+
+wireshark, nesus, nmap, snort
+zenmap is a gui version
+
+when carrying out security assessments it is important to consider the following
+baseline - current implemtnation
+code reviews - glaws in program code
+physical architecture - physical security
+attack surface - visible to outside workd
+deisgn reviews - of secuiry implemtnatin
+
+When carrying out security testing, PLACEHOLDER is considered. What is the meaning of PLACEHOLDER in this context?
+What is the word used to describe
+
+types of testing
+black box testing - no knowledge external and internal testing
+grey box testing - partial knowledge of the target, login and password for one user, 
+white box testing - full knowledge, network diagram, full access
+
+what type of penetration testing would give you the best idea of your security posture?
+black box
+
 
 """
 

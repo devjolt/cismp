@@ -24,20 +24,16 @@
                 margin:0;
                 padding:0;
                 height:100%;
-                
             }
             body{
                 margin:0;
-                padding:0;
-                height:100%;
-                
+                padding:0;                
             }
             h1{
                 color:var(--second-dark);
                 margin:6vw;
                 margin-top:0.5vw;
                 margin-bottom:0.5vw;
-                
             }
 
             h3{
@@ -58,8 +54,6 @@
                 grid-template-columns: auto 80% auto;
                 text-align: center; 
                 height:10vh;
-                
-                
             }
             .header-logo{
                 width:min-content;
@@ -72,11 +66,9 @@
             }  
 
             .introduction{
-                
                 padding:2%;
                 margin-top:1%;
                 text-align: left;
-                
                 margin-left: auto;
                 margin-right: auto;
             }
@@ -116,7 +108,7 @@
                 border-style:solid;
                 border-radius: 10px;
                 border-color: var(--first-light);
-                height:5em;
+                height:6em;
                 width:16em;
                 padding:10px;
                 margin:4px;
@@ -197,34 +189,53 @@
 				background-color: var(--second-light);
 				transition:200ms;
 			}
+
             .qbottom{
                 display: grid;
                 grid-template-columns: 50% 50%;
                 color:var(--first-dark);
                 
             }
-            .qright{   
+
+        
+            .qleft{
+                background-color: rgb(240, 240, 240);
+                border-right: 0.5px solid lightgrey;
                 
             }
+            @media only screen and (max-width: 660px) {
+                
+                .qbottom{
+                    display: grid;
+                    grid-template-columns: auto;
+                    color:var(--first-dark);
+                    }
+                
+                .qleft{
+                    background-color: rgb(240, 240, 240);
+                    border: 0.5px solid lightgrey;
+                
+                }
+            }
+
+            .qright{   
+                min-height:65vh;
+            }
+            
             .help-links{
                 display:none;
-                height: 20vh;
                 align-items: bottom;
                 padding-left: 20px;
                 padding-right: 20px;
             }
-            .qleft{
-                background-color: rgb(240, 240, 240);
-                border-right: 0.5px solid lightgrey;
-                min-height:70vh;
-            }
+
             .multi-item{
                 display: grid;
                 grid-template-columns: 10% auto;             
                 border-bottom: 0.5px solid rgb(221, 221, 221);
                 padding:5px;
                 cursor: pointer;
-                height:min-content
+                height:min-content;
             }
             .dot{
                 margin-left:20px;
