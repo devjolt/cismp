@@ -153,6 +153,16 @@
 				height: min-content;
 				text-align: center;
 			}
+
+            @media only screen and (max-width: 660px) {
+                .stats-grid{
+                    display:grid;
+                    grid-template-columns: auto;
+                    height: min-content;
+                    text-align: center;
+                    }
+                }
+
 			.stats-item{
 				margin:0%;
 			}
@@ -190,6 +200,7 @@
             .qbottom{
                 display: grid;
                 grid-template-columns: 50% 50%;
+                color:var(--first-dark);
                 
             }
             .qright{   
