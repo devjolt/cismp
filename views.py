@@ -20,10 +20,10 @@ class RandomModuleView(TemplateView):
         #we're going to mess with context data, so making a context object
         context = super().get_context_data(**kwargs)
         #possible modules to select from passed in from
-        print(self.modules)
         module = utl.pick_one(self.modules)#select a key from the dict in that module
         print(module)
         key = utl.pick_one(tuple(module.questions.keys()))#random item from list at top of module, then get from dict?
+        print(key)
         #print(module)
         #print(key)
         question_type = 'multi-choice'
@@ -33,33 +33,42 @@ class RandomModuleView(TemplateView):
         #key = 'sqlite_find_the_line'
         if type(module.questions[key]) == dict:#else, run standard stuff to generate question from:
             question_dict = module.questions[key]
-            print(key)
             #try all the question types from most to least likely...
             #correct/incorrect, pairs, pairs code, correct/incorrect code
             if 'positive' in question_dict:
-                print(question_dict)
-                print('Correct incorrect')
                 #print(question_dict['question'])
-                template_question, items = utl.make_items_question_from_correct_incorrect(
-                    question_dict['question'], 
-                    question_dict['positive'],question_dict['negative'], 
-                    question_dict['correct'],question_dict['incorrect']
-                    )
+                if randint(0,1)==0:
+                    print('standard correct incorrect')
+                    template_question, items = utl.make_items_question_from_correct_incorrect(
+                        question_dict['question'], 
+                        question_dict['positive'],question_dict['negative'], 
+                        question_dict['correct'],question_dict['incorrect']
+                        )
+                else:
+                    try:
+                        print('multi option correct incorrect')
+                        template_question, items = utl.multi_option_from_correct_incorrect(question_dict)
+                    except IndexError:
+                        print('back to standard correct incorrect')
+                        template_question, items = utl.make_items_question_from_correct_incorrect(
+                            question_dict['question'], 
+                            question_dict['positive'],question_dict['negative'], 
+                            question_dict['correct'],question_dict['incorrect']
+                            )
+
             elif 'question_with_0' in question_dict:
                 print('Pairs')
-                print(question_dict['question_with_0'],question_dict['question_with_1'])
                 template_question, items = utl.make_items_question_from_pairs(
                     question_dict['question_with_0'],question_dict['question_with_1'], 
                     question_dict['pairs'], question_dict['fillers']
                     )
         else:
-            print('It must be a logic question')
+            print('logic question')
             template_question, items = module.questions[key]()
             #print('items', items)
             #print('question', question)
         
         shuffle(items)
-        print(items)
         context['question'], context['items'] = template_question, items
         context['question_type'] = question_type
         context['key'] = key

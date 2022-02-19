@@ -59,14 +59,14 @@ questions = {
     },
     'preventative measures':{
         'question_with_0':'Which of the following might prevent PLACEHOLDER?',
-        'question_with_1':'PLACEHOLDER is an example of which type of measure?', 
+        'question_with_1':'PLACEHOLDER might prevent which of the following?', 
         'type':'pairs',
         'course_code':'7',
         'pairs':(
-            ('accidental damage', ['Checking references for job applicants','A staffed reception area','A non-disclosure agreement', 'Locking windows','Being aware of tailgating', 'Keeping desks clear', 'Locking sensitive areas', 'Securely disposing of waste', 'A Clean desk policy', 'Being wary of shoulder surfing', 'Securing devices to a desk', 'Antivirus not allowing malware to be downloaded', 'background checks for job applicants', 'clear desk policy', 'security guards patroling a perimeter']),
+            ('accidental damage', ['Checking references for job applicants','A staffed reception area','A non-disclosure agreement', 'Locking windows','Being aware of tailgating', 'Keeping desks clear', 'Locking sensitive areas', 'Securely disposing of waste', 'A Clean desk policy', 'Being wary of shoulder surfing', 'Securing devices to a desk', 'Antivirus not allowing malware to be downloaded', 'Background checks for job applicants', 'A clear desk policy', 'Security guards patroling a perimeter']),
             ('theft', ['An intruder alarm', 'Use of smart water to spray people in sesitive areas', 'Antivirus running checks on a system to identify malware']),
-            ('loss of availability', ['Failover','Server clusters', 'Virtualisation', 'Cloud','network load balancers']),
-            ('loss of data ', ['Failover','Server clusters', 'Virtualisation', 'Cloud',]),
+            ('loss of availability', ['Server clusters', 'Virtualisation', 'Use of the cloud','Network load balancers']),
+            ('loss of data ', ['Failover','Server clusters', 'Virtualisation']),
             
         ),
         'fillers': (

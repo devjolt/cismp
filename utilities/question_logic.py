@@ -528,6 +528,7 @@ def generic_correct_order(num_choices, question_text, ascending_order, descendin
     order= ascending_order if randint(0,1)==0 else descending_order
     
     question_text=re.sub('PLACEHOLDER', order, question_text)
+    
     question=[
         {'text':question_text}
     ]
@@ -546,5 +547,79 @@ def generic_correct_order(num_choices, question_text, ascending_order, descendin
     shuffle(items)
     return question, items
 
-def generic_pick_from_list(num_choices, len_lists, correct_list, incorrect_list):
-    pass
+def multi_option_from_correct_incorrect(resource):
+    #choose whether right answers are correct or incorrect
+    if randint(0,1)==0:
+        right, wrong = (resource['positive'],resource['correct']), (resource['negative'],resource['incorrect'])
+    else:
+        right, wrong = (resource['negative'],resource['incorrect']), (resource['positive'],resource['correct'])  
+    first_question_part = re.sub('PLACEHOLDER', right[0], resource['question'])
+    first_question_part=re.sub(' is ', ' are ', first_question_part)
+    right, wrong = list(right[1]), list(wrong[1])
+    shuffle(wrong)#randomise order of both
+    shuffle(right)
+    #make first part of question
+    
+    question = [{'text':first_question_part}]
+    #choose number of right answers
+    number_right = randint(0, 4)
+    letters_list = ['a', 'b', 'c', 'd']
+    if number_right==0:
+        wrong_answers=wrong[0:4]
+        correct='none of the above'
+        for i in range(4):
+            question.append({'text':f'{letters_list[i]}. {wrong_answers[i]}'})
+    elif number_right==4:
+        correct='all of the above'
+        right_answers=right[0:4]
+        for i in range(4):
+            question.append({'text':f'{letters_list[i]}. {right_answers[i]}'})
+    else:
+        letters_dict = {'a':None, 'b':None, 'c':None, 'd':None}
+        right_letters, wrong_letters=[], []
+        right_answers=right[:number_right]
+        wrong_answers=wrong[number_right:]
+        shuffle(letters_list)
+        for i in range(len(right_answers)):
+            print('right letters:', letters_list)
+            print('right answers:', right_answers)
+            letter=letters_list.pop()
+            letters_dict[letter]=right_answers[i]
+            right_letters.append(letter)
+        while len(letters_list)!=0:
+            print('wrong letters:', letters_list)
+            print('wrong answers:', wrong_answers)
+            letter=letters_list.pop()
+            letters_dict[letter]=wrong_answers.pop()
+            wrong_letters.append(letter)
+        right_letters.sort()
+        correct=', '.join(right_letters)
+        for letter in ['a', 'b', 'c', 'd']:
+            question.append({'text':f'{letter}. {letters_dict[letter]}'})
+    item_id=1
+    items=[{'item':correct, 'indicator':'correct', 'id':f'item{item_id}'}]
+    used=[correct]
+
+    #make incorrect answers
+    while len(items)!=4:
+        #pick type of wrong answer
+        number = randint(0, 4)
+        if number==0:
+            incorrect='none of the above'
+        elif number==4:
+            incorrect='all of the above'
+        else:
+            letters=['a', 'b', 'c', 'd']
+            shuffle(letters)
+            letters = letters[0:number]
+            letters.sort()
+            incorrect=', '.join(letters)
+        if incorrect not in used:
+            item_id+=1
+            items.append({'item':incorrect, 'indicator':'incorrect', 'id':f'item{item_id}'})
+            used.append(incorrect)
+        else:
+            continue
+    shuffle(items)
+    shuffle(items)
+    return question, items

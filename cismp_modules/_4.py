@@ -231,9 +231,9 @@ questions = {
         'type':'pairs',
         'course_code':'',
         'pairs':(
-            ('physical', ['laptop lock','door lock']),
-            ('technical', ['authentication system','retinal scan','fingerprint scan']),
-            ('proceedural', ['acceptable use policy', 'disciplinary']),
+            ('physical', ['a laptop lock','a door lock']),
+            ('technical', ['an authentication system','a retinal scan','a fingerprint scan']),
+            ('proceedural', ['an acceptable use policy', 'a disciplinary policy']),
         ),
         'fillers': (
             ('forceful', 'threats'),
@@ -342,7 +342,7 @@ questions = {
 
 'controls': {
         'question_with_0':'Which of the following is true of PLACEHOLDER?',
-        'question_with_1':'What type of control does the following describe PLACEHOLDER?',
+        'question_with_1':'What type of control does the following describe: PLACEHOLDER?',
         'type':'pairs',
         'course_code':'',
         'pairs':(
