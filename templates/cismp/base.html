@@ -25,6 +25,12 @@
                 padding:0;
                 height:100%;
             }
+            @media only screen and (max-width: 660px) {
+                html{ 
+                    color:black;
+                    font-weight: 300;
+                }
+            }
             body{
                 margin:0;
                 padding:0;                
@@ -123,14 +129,16 @@
 
             .active{
                 transition:0.5s;
-                background-color: var(--third-light);
+                color: var(--third-light);
+                background-image: linear-gradient(to bottom right, var(--second-light) 50%, var(--first-dark) 100%);
+                /*background-image: radial-gradient(circle,  var(--second-light) 70%,  var(--first-dark) 100%);*/
             }
             
             .active:hover{
-                color: var(--third-light);
                 transform: scale(1.1) translate(0%, 3%);
-                background-image: linear-gradient(to bottom right, var(--second-light), var(--first-dark));
-                box-shadow: 0px 5px 8px 0px;
+                color: var(--second-light);
+                background-image: linear-gradient(to bottom right, white, white);
+                box-shadow: 0px 5px 8px 0px var(--first-light);
                 cursor: pointer;   
                 transition:0.5s;
             }
@@ -206,7 +214,8 @@
                 .qbottom{
                     display: grid;
                     grid-template-columns: auto;
-                    color:var(--first-dark);
+                    color:black;
+                    font-weight: 400;
                     }
                 
                 .qleft{
