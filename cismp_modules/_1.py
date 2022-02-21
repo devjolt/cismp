@@ -2,9 +2,6 @@ from random import randint
 
 from ._1_logic import *
 
-def ip_address(length = 4):
-    return '.'.join([str(randint(0, 255)) for i in range(length)])
-
 questions = {
     'terms': {
         'question_with_0':'Which best describes the following: PLACEHOLDER?',
@@ -86,6 +83,23 @@ questions = {
             'It improves service',    
         ),
     },
+    'test_question': {
+        'question':'From a security viewpoint, which of the following is PLACEHOLDERrelevant to the information management cycle?',
+        'type':'correct incorrect',
+        'positive':'',
+        'negative':'ir',
+        'course_code':'',
+        'correct':(
+            'It reduces risk',
+        ),
+        'incorrect': (
+            'It reduces costs',
+            'It improves compliance',
+            'It improves service',    
+        ),
+    },
+    
+
 
 }
 

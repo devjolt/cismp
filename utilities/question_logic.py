@@ -547,8 +547,11 @@ def generic_correct_order(num_choices, question_text, ascending_order, descendin
     shuffle(items)
     return question, items
 
+
 def multi_option_from_correct_incorrect(resource):
     #choose whether right answers are correct or incorrect
+    print()
+    print('start')
     if randint(0,1)==0:
         right, wrong = (resource['positive'],resource['correct']), (resource['negative'],resource['incorrect'])
     else:
@@ -562,17 +565,47 @@ def multi_option_from_correct_incorrect(resource):
     
     question = [{'text':first_question_part}]
     #choose number of right answers
-    number_right = randint(0, 4)
+    
+    max_right=4
+    number_right = randint(0, max_right)
     letters_list = ['a', 'b', 'c', 'd']
+    building_items_letters_list=['a', 'b', 'c', 'd']
+    print('number right',number_right)
+    print('question', question)
+    print('right', right)
+    print('wrong', wrong)
+    for i in range(2):
+        changes_made=0
+        #note there must be enough right and wrong answers for this  to work... loop checks this!
+        if len(wrong)<4-number_right:#if less wrong answers available than we need
+            number_right=max_right-len(wrong)#use max number of wrong answers by altering number_right
+            changes_made+=1
+
+        if len(right)<number_right:#if less right answers available than we need
+            number_right=len(right)#use max number of right answers by altering number_right
+            changes_made+=1
+
+        if changes_made==2:#if we've changed both, then it is impossible to create this question because it doesn't have enough right or wrong answers
+            if i == 1:#If this is the case on the second time around, question building is doomed to fail when popping answers below
+                print('Error: question resource does not have enough right or wrong answers!')      
+                break
+            max_right=3#try reducing the number of letters available and try again...
+            number_right = randint(0, max_right)
+            letters_list = ['a', 'b', 'c']
+            building_items_letters_list=['a', 'b', 'c']
+            continue
+        break
+
     if number_right==0:
-        wrong_answers=wrong[0:4]
+        wrong_answers=wrong[number_right:4]
+        print('wrong answers:', wrong_answers)
         correct='none of the above'
-        for i in range(4):
+        for i in range(number_right+len(letters_list)):
             question.append({'text':f'{letters_list[i]}. {wrong_answers[i]}'})
-    elif number_right==4:
+    elif number_right==max_right:
         correct='all of the above'
-        right_answers=right[0:4]
-        for i in range(4):
+        right_answers=right[0:max_right]
+        for i in range(max_right):
             question.append({'text':f'{letters_list[i]}. {right_answers[i]}'})
     else:
         letters_dict = {'a':None, 'b':None, 'c':None, 'd':None}
@@ -594,22 +627,22 @@ def multi_option_from_correct_incorrect(resource):
             wrong_letters.append(letter)
         right_letters.sort()
         correct=', '.join(right_letters)
-        for letter in ['a', 'b', 'c', 'd']:
+        for letter in building_items_letters_list:
             question.append({'text':f'{letter}. {letters_dict[letter]}'})
     item_id=1
     items=[{'item':correct, 'indicator':'correct', 'id':f'item{item_id}'}]
     used=[correct]
 
     #make incorrect answers
-    while len(items)!=4:
-        #pick type of wrong answer
-        number = randint(0, 4)
+    while len(items)!=4:#we want there to be four items
+        
+        number = randint(0, max_right)#pick type of wrong answer using max_right (usually 4, 3 if inadequate numbers of right or wrong answers)
         if number==0:
             incorrect='none of the above'
-        elif number==4:
+        elif number==max_right:
             incorrect='all of the above'
         else:
-            letters=['a', 'b', 'c', 'd']
+            letters=building_items_letters_list
             shuffle(letters)
             letters = letters[0:number]
             letters.sort()
