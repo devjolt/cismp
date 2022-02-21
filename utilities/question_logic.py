@@ -550,8 +550,6 @@ def generic_correct_order(num_choices, question_text, ascending_order, descendin
 
 def multi_option_from_correct_incorrect(resource):
     #choose whether right answers are correct or incorrect
-    print()
-    print('start')
     if randint(0,1)==0:
         right, wrong = (resource['positive'],resource['correct']), (resource['negative'],resource['incorrect'])
     else:
@@ -570,10 +568,10 @@ def multi_option_from_correct_incorrect(resource):
     number_right = randint(0, max_right)
     letters_list = ['a', 'b', 'c', 'd']
     building_items_letters_list=['a', 'b', 'c', 'd']
-    print('number right',number_right)
-    print('question', question)
-    print('right', right)
-    print('wrong', wrong)
+    #print('number right',number_right)
+    #print('question', question)
+    #print('right', right)
+    #print('wrong', wrong)
     for i in range(2):
         changes_made=0
         #note there must be enough right and wrong answers for this  to work... loop checks this!
@@ -585,6 +583,7 @@ def multi_option_from_correct_incorrect(resource):
             number_right=len(right)#use max number of right answers by altering number_right
             changes_made+=1
 
+        #print(changes_made)
         if changes_made==2:#if we've changed both, then it is impossible to create this question because it doesn't have enough right or wrong answers
             if i == 1:#If this is the case on the second time around, question building is doomed to fail when popping answers below
                 print('Error: question resource does not have enough right or wrong answers!')      
@@ -596,9 +595,11 @@ def multi_option_from_correct_incorrect(resource):
             continue
         break
 
+    #print('max_right:', max_right)
+
     if number_right==0:
-        wrong_answers=wrong[number_right:4]
-        print('wrong answers:', wrong_answers)
+        wrong_answers=wrong[0:max_right-number_right]
+        #print('wrong answers:', wrong_answers)
         correct='none of the above'
         for i in range(number_right+len(letters_list)):
             question.append({'text':f'{letters_list[i]}. {wrong_answers[i]}'})
@@ -611,17 +612,17 @@ def multi_option_from_correct_incorrect(resource):
         letters_dict = {'a':None, 'b':None, 'c':None, 'd':None}
         right_letters, wrong_letters=[], []
         right_answers=right[:number_right]
-        wrong_answers=wrong[number_right:]
+        wrong_answers=wrong[0:max_right-number_right]
         shuffle(letters_list)
         for i in range(len(right_answers)):
-            print('right letters:', letters_list)
-            print('right answers:', right_answers)
+            #print('right letters:', letters_list)
+            #print('right answers:', right_answers)
             letter=letters_list.pop()
             letters_dict[letter]=right_answers[i]
             right_letters.append(letter)
         while len(letters_list)!=0:
-            print('wrong letters:', letters_list)
-            print('wrong answers:', wrong_answers)
+            #print('wrong letters:', letters_list)
+            #print('wrong answers:', wrong_answers)
             letter=letters_list.pop()
             letters_dict[letter]=wrong_answers.pop()
             wrong_letters.append(letter)
