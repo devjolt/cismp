@@ -375,6 +375,21 @@ questions = {
             (['sales', 'marketing'], ['arpa testing', 'yellow box testing', 'red box testing', 'dns testing'])
         )
     },
+    'choosing products':{''
+        'When choosing a security critical product to protect sensitive information, it is PLACEHOLDER wise to choose one which is:'
+         'type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'certified against ISO/IEC 2700 series standard', 'proven secure by appropriately trained pentesting professionals'
+        ),
+        'incorrect':(
+            'fully guaranteed', 'evaluated against common criteria', 'highlt rated by trade journals'
+        )
+    },
+    
+
 }
 
 '''

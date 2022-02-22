@@ -141,13 +141,10 @@ questions = {
         ),
     },
 
-
-
 policy should direct
 intro
 scope
 policy
-
 
 upper case or lower case is a standard
 
@@ -157,7 +154,6 @@ categories
 Which categories should x document have
 
 How would you go about making a policy?
-
 """
 
     

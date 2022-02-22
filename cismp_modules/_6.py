@@ -234,8 +234,20 @@ questions = {
                 ),
             
         )
-    }
-    
+    },
+    'cloud computing services': {
+        'question_with_0':'If an email message is PLACEHOLDER, this can be described as?',
+        'question_with_1':'What does it mean if an email message is PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'6',
+        'pairs':(
+            ('masquerading', 'not from the person it claims to be from'),
+            ('phishing', 'trying to extract information from non targeted recipients'),
+            ('spear phishing', 'extracting information from a specific recipient'),
+            ('whaling', 'attempting to get information from a high value target'),
+        ),
+        'fillers': ()
+    },
 }
 
 """

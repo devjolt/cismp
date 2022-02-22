@@ -175,6 +175,7 @@ questions = {
         'negative':'not',
         'course_code':'',
         'correct':(
+            'defined as something calculated from a set of numbers or bit strings',
             'input can be of any length',
             'output is always a fixed length',
             'a fixed block of data will always return the same value',
@@ -189,6 +190,8 @@ questions = {
             'hashes are cracked by brute force attacks'
         ),
         'incorrect': (
+            'an encryption technique',
+            'a type of malicious software',
             'input is always a fixed length',
             'output can be of any length',
             'any two blocks from the same document will always return the same ',

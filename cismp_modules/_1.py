@@ -9,10 +9,12 @@ questions = {
         'type':'pairs',
         'course_code':'',
         'pairs':(
+            ('seperation of duties', 'the principle that no user should be given enough privileges to misuse the system on their own'),
+            ('assurance', 'the amount of confidence that an organisation has that its controls satisfy necessary security requirements'),
             ('non-repudiation', ['the ability to prove that an event occurred']), 
             ('fail secure', ['disconnecting a system if an event occurs']),
             ('symmetric key encryption', ['the use of public key cryptography to prevent the republishing of keys']),
-            (['defence in depth'], 'the concept used in information security in which multiple layers of security controls are placed within a system'),
+            (['defence in depth'], ['the concept used in information security in which multiple layers of security controls are placed within a system','requires that an organisation should implement overlapping secuirty controls']),
             (['impact','likelihood'], ['one of the two terms used in combination to define levels of risk']),
             ('risk appetite', ['the amount and type of risk that an organisation is prepared to pursue, retain or take']),
             ('risk tolerance', ['the amount and type of risk that an organisation takes']),
@@ -83,21 +85,68 @@ questions = {
             'It improves service',    
         ),
     },
-    'test_question': {
-        'question':'From a security viewpoint, which of the following is PLACEHOLDERrelevant to the information management cycle?',
+    'confientiality integrity': {
+        'question':'Which of the following techniques can be used to ensure PLACEHOLDER?',
         'type':'correct incorrect',
-        'positive':'',
-        'negative':'ir',
+        'positive':'confidentiality',
+        'negative':'integrity',
         'course_code':'',
         'correct':(
-            'It reduces risk',
+            'encryption',
+            'shredding',
+            'lockable cabinets',
+            'categorising documents', 
+            'access control'
         ),
         'incorrect': (
-            'It reduces costs',
-            'It improves compliance',
-            'It improves service',    
+            'hashing',
+            'data validation',
+            'input validation',
+            'audit trails'
         ),
     },
+    'confientiality availability': {
+        'question':'Which of the following techniques can be used to ensure PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'confidentiality',
+        'negative':'availability',
+        'course_code':'',
+        'correct':(
+            'encryption',
+            'shredding',
+            'lockable cabinets',
+            'categorising documents', 
+            'access control'
+        ),
+        'incorrect': (
+            'backups',
+            'use of redundancy',
+            'failover',
+            'RAID'
+        ),
+
+    
+    },
+    'integrity availability': {
+        'question':'Which of the following techniques can be used to ensure PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'integrity',
+        'negative':'availability',
+        'course_code':'',
+        'correct':(
+            'hashing',
+            'data validation',
+            'input validation',
+            'audit trails'
+        ),
+        'incorrect': (
+            'backups',
+            'use of redundancy',
+            'failover',
+            'RAID'
+        ),
+    },
+
     
 
 

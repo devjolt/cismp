@@ -81,7 +81,52 @@ questions = {
             'firewall rules can not be based on content',
         ),
     },
-
+    'acceptable use policy':{
+        'question':'which of the following is PLACEHOLDER part of the process flow on building an acceptable usage policy?',
+        'type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'define the target audience, readership, buisness or organisation',
+            'consider the impact of the policy',
+            'establish rules, compliance and legal concerns',
+            'gather feedback from shareholders and review previous policy',
+            'review and update existing policy or set up a new template',
+            'decide which devides and types of access should be included',
+            'find a template',
+            'download a template',
+        ),
+        'incorrect': (
+            f'define punishments',
+            f'implement the policy regardless of impact for safety',
+            'consider how to enforce the policy on stakeholders',
+            'generate your own template to avoid copyright concerns',
+            'share template with GDPR',
+            'share template with OSEC',
+            'obtain template from GDPR',
+            f'only desktops located on-site should be included'
+        ),
+    },
+    'acceptable use policy':{
+        'question':'which of the following is an example of PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'enabling',
+        'negative':'authentication',
+        'course_code':'',
+        'correct':(
+            'specifying user access rights to a folder',
+            'specifying user access privileges to part of a system',
+            'specifying user access rights to an application',
+            'granting access rights to edit a web page',
+        ),
+        'incorrect': (
+            f'using a password to access an application',
+            f'using a smartcard to access a server room',
+            'requiring a pin number and RFID tag to access data on a USB drive',
+            'needing to complete a capcha and enter a secret phrase to access part of a system'
+        ),
+    },
 }
 
 """
