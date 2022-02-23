@@ -2,8 +2,6 @@ from random import randint
 
 from ._3_logic import *
 
-
-
 questions = {
     'uk_government_data_classifications_in_order':uk_government_data_classifications_in_order,
 
@@ -122,7 +120,63 @@ questions = {
             ),
         'fillers': ()
     },
+    'why use a framework': {
+        'question':'Regarding security frameworks, which of the following statements is PLACEHOLDER accurate?',
+        'question_type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'makes sure that assurance requirements are understood',
+            'ensures that responsiblities are allocated appropriately',
+            'helps to clearly define accountabilities',
+            'helps assurance activities to be coordinated',
+            'provides consistency in approach to infosec',
+        ),
+        'incorrect': (
+            'cheaper than using an ad hoc approach',
+            'more expensive than using an ad hoc approach',
+            'provides guidelines which must be followed',
+        ),
+    },
 
+    'the steering commitee should consist of': {
+        'question':'Regarding security frameworks, which of the following statements is PLACEHOLDER accurate?',
+        'question_type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'line managers',
+            'application owners',
+            'regional managers',
+            'IT managers',
+            'the IT director',
+            'chief security officer',
+            'coorporate risk manager',
+            'chief internal auditor',
+        ),
+        'incorrect': (
+            'union rep',
+            'local councillor',
+            'all who wish to attend',
+            'only the company directors',
+            'external auditors',
+        ),
+    },
+    'policies, standards, procedures, guidelines': {
+        'question_with_0':'Which best describes PLACEHOLDER?',
+        'question_with_1':'What best describes the following: PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'',
+        'pairs':(
+            ('policies',['high level statement or organisation\'s values, goals and objecives', 'a general approach to achieving an organisation\'s values, goals and objectives']),
+            ('standards',['drawn from policies quantifies what needs to be done',  'provides consistency in controls can be measured']),
+            ('proceedures',['obligations', 'specific things which must be done']),
+            ('guidelines',['best practce', 'not mandatory', 'provides advice'])
+            ),
+        'fillers': ()
+    },
 }
 
 """
@@ -154,6 +208,13 @@ categories
 Which categories should x document have
 
 How would you go about making a policy?
+
+steering committee
+
+bodies
+
+27001 - requirements... things you must do
+27002 - controls derived from 27002
 """
 
     
