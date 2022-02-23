@@ -9,21 +9,28 @@ questions = {
         'type':'pairs',
         'course_code':'',
         'pairs':(
+            
+            ('business impact',' effect on an organisation of a vulnerability being exploited'),
+            ('security policy','sets out the organisation\’s formal stance on security for staff and contractors to see'),
+            ('risk assessment', 'compile a risk register against all information assets'),
+            ('Objective evidence', 'Information which can be proved true through observation, documents, records, orpersonal interview'),
+            ('Classification labelling of information', 'a control which helps to protect against unintentional disclosure ofinformation'),
+            ('the major purpose of information security in an organisation','supporting the effective and efficient achievement of the organisation\’s businessobjectives'),
             ('seperation of duties', 'the principle that no user should be given enough privileges to misuse the system on their own'),
             ('assurance', 'the amount of confidence that an organisation has that its controls satisfy necessary security requirements'),
-            ('non-repudiation', ['the ability to prove that an event occurred']), 
-            ('fail secure', ['disconnecting a system if an event occurs']),
-            ('symmetric key encryption', ['the use of public key cryptography to prevent the republishing of keys']),
-            (['defence in depth'], ['the concept used in information security in which multiple layers of security controls are placed within a system','requires that an organisation should implement overlapping secuirty controls']),
+            ('non-repudiation', ['the ability to prove that an event occurred','Protects against a person denying later that a communication or transaction tookplace']), 
+            ('fail secure', 'disconnecting a system if an event occurs'),
+            ('symmetric key encryption', 'the use of public key cryptography to prevent the republishing of keys'),
+            ('defence in depth', ['the concept used in information security in which multiple layers of security controls are placed within a system','requires that an organisation should implement overlapping secuirty controls']),
             (['impact','likelihood'], ['one of the two terms used in combination to define levels of risk']),
-            ('risk appetite', ['the amount and type of risk that an organisation is prepared to pursue, retain or take']),
-            ('risk tolerance', ['the amount and type of risk that an organisation takes']),
+            ('risk appetite', 'the amount and type of risk that an organisation is prepared to pursue, retain or take'),
+            ('risk tolerance', 'the amount and type of risk that an organisation takes'),
             ('improved resilience against and recovery time from a harmful incident', ['the primary benefit of implementing appropriate information security within an organisation']),
             ('an accidental threat', ['human error', 'malfunctions', 'fire','flood']),
             ('a deliberate threat', ['ransomeware', 'malware', 'shoulder surfing']),
-            (['Open Source Intelligence', 'OSINT'], ['the collection andanalysis of information that is gathered from public sources']),
+            (['Open Source Intelligence', 'OSINT'], 'the collection andanalysis of information that is gathered from public sources'),
             (['the MOST IMPORTANT role of senior management in regard to information security'], ['Providing visible and material support for information security within the organisation']),
-            (['Privacy'], ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
+            ('Privacy', ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
             (['Intellectual Property', 'IP'], ['the legal rights which result from activity in the industrial, scientific, literary and artistic fields']),
             (['ISO/IEC 27001'], ['a specification for an Information Security Management System']),
             (['ISO/IEC 27002'], ['information Security Management System implementation guidance']),
@@ -147,19 +154,38 @@ questions = {
         ),
     },
 
-    
-
-
+    'cloud service contract': {
+        'question':'When setting up a contract with a supplier for hosting cloud services, which of the following safeguards is PLACEHOLDER important?',
+        'type':'correct incorrect',
+        'positive':'most',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'The ability to recover all information from the cloud if the contract isterminated',
+            'The confidentiality and integrity of downloading information from the cloud',
+            'The service level requirement for availability of the information'
+        ),
+        'incorrect': (
+            'The make of hardware used by the hosting supplier',
+            'The make of software used by the hosting supplier',
+            'The location of the servers of the hosting supplier',
+        ),
+    },
 }
 
 """
-avoid
-mitigate
-transfer
 
-statutory requirement and advisory requirement
-A statutory requirement is prescribed by law, an advisory requirement is typically
-a recommendatio
+
+('Regular incremental and full backups', ''),
+('A formal disciplinary process, ''),
+
+
+('trapdoor ', 'structured programming technique'),
+('A gate access control system requiring a security token', 'prevent unauthorised access, damage and interference to IT services'),
+
+
+
+('business continuity plan test results', 'record of Information Security Management System operation'),
 
 """
 

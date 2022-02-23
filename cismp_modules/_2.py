@@ -14,20 +14,20 @@ questions = {
             ('threat', 'action or event with an unwanted consequence'),
             ('risk', 'likelihood multiplied by impact'),
             ('impact', ['measurement of the consequences of an event happening', 'measured in terms of CIA']),
-            ('non-repudiation', ['the ability to prove that an event occurred']), 
-            ('fail secure', ['disconnecting a system if an event occurs']),
-            (['impact','likelihood'], ['one of the two terms used in combination to define levels of risk']),
-            ('risk appetite', ['the amount and type of risk that an organisation is prepared to pursue, retain or take']),
-            ('risk tolerance', ['the amount and type of risk that an organisation takes']),
-            ('improved resilience against and recovery time from a harmful incident', ['the primary benefit of implementing appropriate information security within an organisation']),
+            ('non-repudiation', 'the ability to prove that an event occurred'), 
+            ('fail secure', 'disconnecting a system if an event occurs'),
+            (['impact','likelihood'], 'one of the two terms used in combination to define levels of risk'),
+            ('risk appetite', 'the amount and type of risk that an organisation is prepared to pursue, retain or take'),
+            ('risk tolerance', 'the amount and type of risk that an organisation takes'),
+            ('improved resilience against and recovery time from a harmful incident', 'the primary benefit of implementing appropriate information security within an organisation'),
             ('an accidental threat', ['human error', 'malfunctions', 'fire','flood']),
             ('a deliberate threat', ['ransomeware', 'malware', 'shoulder surfing']),
-            (['Open Source Intelligence', 'OSINT'], ['the collection andanalysis of information that is gathered from public sources']),
-            (['the MOST IMPORTANT role of senior management in regard to information security'], ['Providing visible and material support for information security within the organisation']),
-            (['Privacy'], ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
-            (['need to know basis'], ['preventing staff from attaining skills accross an entire process and thereby rendering it vulnerable']),
+            (['Open Source Intelligence', 'OSINT'], 'the collection andanalysis of information that is gathered from public sources'),
+            ('the MOST IMPORTANT role of senior management in regard to information security', 'Providing visible and material support for information security within the organisation'),
+            ('Privacy', ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
+            ('need to know basis', 'preventing staff from attaining skills accross an entire process and thereby rendering it vulnerable'),
             (['ISMS','information security management system'], 'defines and manages controls that an organization needs to implement to ensure that it is sensibly protecting the confidentiality, availability, and integrity of assets from threats and vulnerabilities'),
-            (['Business continuity and disaster recovery'], ['a set of processes and techniques used to help an organization recover from a disaster and continue or resume routine business operations']),
+            ('Business continuity and disaster recovery', 'a set of processes and techniques used to help an organization recover from a disaster and continue or resume routine business operations'),
             ('controls', 'protect against whatever risk is identified'),
             ('inherant risk','risks perculiar to a specific organisation'),
             ('PESTLE','analysis of political, social, economic and other environmental factors'),
@@ -56,15 +56,16 @@ questions = {
             ('an accidental threat', ['human error', 'malfunctions', 'fire','flood']),
             ('a deliberate threat', ['ransomeware', 'malware', 'shoulder surfing']),
             (['Open Source Intelligence', 'OSINT'], 'the collection andanalysis of information that is gathered from public sources'),
-            (['the MOST IMPORTANT role of senior management in regard to information security'], 'Providing visible and material support for information security within the organisation'),
-            (['Privacy'], ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
-            (['need to know basis'], ['preventing staff from attaining skills accross an entire process and thereby rendering it vulnerable']),
+            ('the MOST IMPORTANT role of senior management in regard to information security', 'Providing visible and material support for information security within the organisation'),
+            ('Privacy', ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
+            ('need to know basis', 'preventing staff from attaining skills accross an entire process and thereby rendering it vulnerable'),
             (['ISMS','information security management system'], 'defines and manages controls that an organization needs to implement to ensure that it is sensibly protecting the confidentiality, availability, and integrity of assets from threats and vulnerabilities'),
-            (['Business continuity and disaster recovery'], ['a set of processes and techniques used to help an organization recover from a disaster and continue or resume routine business operations']),
+            ('Business continuity and disaster recovery', 'a set of processes and techniques used to help an organization recover from a disaster and continue or resume routine business operations'),
             ('controls', 'protect against whatever risk is identified'),
             ('inherant risk','risks perculiar to a specific organisation'),
             ('PESTLE','analysis of political, social, economic and other environmental factors'),
-            ('ISO 27002','a code of practise for security controls')
+            ('ISO 27002','a code of practise for security controls'),
+            ('quantitative risk assessment','a numerical means to measure comparative risks')
         ),
         
         'fillers': (
@@ -161,11 +162,11 @@ questions = {
             ),
         'fillers': ()
     },
-    'integrity availability': {
+    'responses to risk correct incorrect': {
         'question':'Which of the following is PLACEHOLDER a response to risk?',
         'type':'correct incorrect',
-        'positive':'mitigation',
-        'negative':'acceptance',
+        'positive':'',
+        'negative':'not',
         'course_code':'',
         'correct':(
             'avoid',
@@ -191,8 +192,36 @@ questions = {
             'exterminate'
         ),
     },
-
-
+    'risk assessment or risk response': {
+        'question':'Which of the following is part of PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'risk assessment',
+        'negative':'risk response',
+        'course_code':'',
+        'correct':(
+            'idientification of risks',
+            'idntification of assets', 
+            'threat assessment',
+            'vulnerability assessment', 
+            'risk analysis', 
+            'risk prioritisation', 
+            'risk evaluation',
+            'multiplying likelihood by impact'
+            'examining existing controls',
+            'consulting',
+        ),
+        'incorrect': (
+            'residual risk calculation',
+            'avoid',
+            'fallback', 
+            'transfer',
+            'share', 
+            'reduce', 
+            'exploit', 
+            'accept',
+            'terminate'
+        ),
+    },
 }
 
 """

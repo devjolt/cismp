@@ -3,6 +3,82 @@ from ._6_logic import *
 
 
 questions = {
+    'OSI model layers in order':osi_model_layers_in_order,
+    'TCP IP model layers in order':tcp_ip_model_layers_in_order,
+    'OSI model': {
+        'question_with_0':'Which of the following describe the PLACEHOLDER layer in the OSI model?',
+        'question_with_1':'Which layer of the OSI model is the PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'5',
+        'pairs':(
+            ('application', ['layer 7','first layer for a sending device', 'final layer for a recieving device', 'seventh layer for a recieving device', 'last layer for a recieving device', 'layer which shows what was used to create a message']),
+            ('presentation', ['layer 6','second layer for a sending device', 'sixth layer for a recieving device', 'layer containing information about appearance of data']),
+            ('session', ['layer 5','third layer for a sending device', 'fifth layer for a recieving device', 'layer which sets parameters for communication']),
+            ('transport', ['layer 4','fourth layer for a sending device', 'fourth layer for a recieving device', 'layer which may use TCP', 'layer which may use UDP']),
+            ('network', ['layer 3','fifth layer for a sending device', 'third layer for a recieving device', 'layer which uses IP', 'layer involved in routing', 'layer which routes data to an IP']),
+            ('datalink', ['layer 2','sixth layer for a sending device', 'second layer for a recieving device', 'layer which converts IP to a MAC address', 'routes data to a device']),
+            ('physical', ['layer 1','final layer for a sending device', 'seventh layer for a sending device','last layer for a sending device', 'first layer for a recieving device', 'layer which may use ethernet cable to get data to a device', 'layer which may use a wireless network to get data to a device']),
+        ),
+        'fillers': (
+            ('multi-factor', ['layer 0', 'layer 1','eight layer for a sending device', 'eigth layer for a recieving device','the first, second and third layer for a sending device', 'the first, second and third layer for a recieving device']),
+        )
+    },
+    'OSI model and IP TCP model': {
+        'question_with_0':'Which IP TCP model layer contains the PLACEHOLDER OSI layer?',
+        'question_with_1':'',
+        'type':'pairs',
+        'course_code':'5',
+        'pairs':(
+            (['application','presentation', 'session'], ['application']),
+            ('transport', ['transport', 'host to host']),
+            (['network','datalink'], ['internet']),
+            ('physical', ['network interface']),
+        ),
+        'fillers': (
+            (['firewall','b-router', 'security', 'perimeter'], ['layer 0', 'layer 5']),
+        )
+    },
+    'Network devices': {
+        'question':'which of the following is PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'true',
+        'negative':'false',
+        'course_code':'',
+        'correct':(
+            'a router is a layer 3 networking device',
+            'a router routes network traffic between one IP subnet to another',
+            'a router may route traffic from a private to a public network',
+            'a switch connects using a physical mac address',
+            'a switch may be managed or unmanaged',
+            'modern swithces may also incorporate a router',
+            'modern firewalls work at multiple layers of the OSI model',
+            'firewalls may be physical',
+            'firewalls may be software based',
+            'firewalls allow or deny traffic based on rules and access control lists',
+            'firewall rules may be based on application protocols',
+            'firewall rules may be based on port number',
+            'firewall rules may be based on content',
+            'firewall rules may be based on IP address',
+        ),
+        'incorrect': (
+            f'a router is a layer {randint(1,2)} networking device',
+            f'a router is a layer {randint(4,7)} networking device',
+            'a router routes network traffic between one MAC address and another',
+            'a router only routes traffic from a public to a private network',
+            'a switch connects using IP address',
+            'all switches are managed',
+            'all switches are unmanaged',
+            f'modern firewalls work only at layer {randint(1,2)} of the OSI model',
+            'firewalls are only physical',
+            'firewalls are only software based',
+            'firewalls allow or deny traffic based on AUP',
+            'firewall rules are always based on application protocols',
+            'firewall rules are always based on port number',
+            'firewall rules are always based on content',
+            'firewall rules are always based on IP address',
+            'firewall rules can not be based on content',
+        ),
+    },
     'rings of security':rings_of_security,
     'types of virus': {
         'question_with_0':'What best describes a PLACEHOLDER virus?',

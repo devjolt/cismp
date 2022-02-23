@@ -5,82 +5,37 @@ def ip_address(length = 4):
     return '.'.join([str(randint(0, 255)) for i in range(length)])
 
 questions = {
-    'OSI model layers in order':osi_model_layers_in_order,
-    'TCP IP model layers in order':tcp_ip_model_layers_in_order,
-    'OSI model': {
-        'question_with_0':'Which of the following describe the PLACEHOLDER layer in the OSI model?',
-        'question_with_1':'Which layer of the OSI model is the PLACEHOLDER?',
+    'terms': {
+        'question_with_0':'Which best describes the following: PLACEHOLDER?',
+        'question_with_1':'What best describes the following: PLACEHOLDER?',
         'type':'pairs',
-        'course_code':'5',
-        'pairs':(
-            ('application', ['layer 7','first layer for a sending device', 'final layer for a recieving device', 'seventh layer for a recieving device', 'last layer for a recieving device', 'layer which shows what was used to create a message']),
-            ('presentation', ['layer 6','second layer for a sending device', 'sixth layer for a recieving device', 'layer containing information about appearance of data']),
-            ('session', ['layer 5','third layer for a sending device', 'fifth layer for a recieving device', 'layer which sets parameters for communication']),
-            ('transport', ['layer 4','fourth layer for a sending device', 'fourth layer for a recieving device', 'layer which may use TCP', 'layer which may use UDP']),
-            ('network', ['layer 3','fifth layer for a sending device', 'third layer for a recieving device', 'layer which uses IP', 'layer involved in routing', 'layer which routes data to an IP']),
-            ('datalink', ['layer 2','sixth layer for a sending device', 'second layer for a recieving device', 'layer which converts IP to a MAC address', 'routes data to a device']),
-            ('physical', ['layer 1','final layer for a sending device', 'seventh layer for a sending device','last layer for a sending device', 'first layer for a recieving device', 'layer which may use ethernet cable to get data to a device', 'layer which may use a wireless network to get data to a device']),
-        ),
-        'fillers': (
-            ('multi-factor', ['layer 0', 'layer 1','eight layer for a sending device', 'eigth layer for a recieving device','the first, second and third layer for a sending device', 'the first, second and third layer for a recieving device']),
-        )
-    },
-    'OSI model and IP TCP model': {
-        'question_with_0':'Which IP TCP model layer contains the PLACEHOLDER OSI layer?',
-        'question_with_1':'',
-        'type':'pairs',
-        'course_code':'5',
-        'pairs':(
-            (['application','presentation', 'session'], ['application']),
-            ('transport', ['transport', 'host to host']),
-            (['network','datalink'], ['internet']),
-            ('physical', ['network interface']),
-        ),
-        'fillers': (
-            (['firewall','b-router', 'security', 'perimeter'], ['layer 0', 'layer 5']),
-        )
-    },
-    'Network devices': {
-        'question':'which of the following is PLACEHOLDER?',
-        'type':'correct incorrect',
-        'positive':'true',
-        'negative':'false',
         'course_code':'',
-        'correct':(
-            'a router is a layer 3 networking device',
-            'a router routes network traffic between one IP subnet to another',
-            'a router may route traffic from a private to a public network',
-            'a switch connects using a physical mac address',
-            'a switch may be managed or unmanaged',
-            'modern swithces may also incorporate a router',
-            'modern firewalls work at multiple layers of the OSI model',
-            'firewalls may be physical',
-            'firewalls may be software based',
-            'firewalls allow or deny traffic based on rules and access control lists',
-            'firewall rules may be based on application protocols',
-            'firewall rules may be based on port number',
-            'firewall rules may be based on content',
-            'firewall rules may be based on IP address',
+        'pairs':(
+            ('Errors','Most security breaches caused by employees are through'),
+            ('security policy','sets out the organisation\’s formal stance on security for staff and contractors to see'),
+            ('Objective evidence', 'Information which can be proved true through observation, documents, records, orpersonal interview'),
+            ('Classification labelling of information', 'a control which helps to protect against unintentional disclosure ofinformation'),
+            ('the major purpose of information security in an organisation','supporting the effective and efficient achievement of the organisation\’s businessobjectives'),
+            ('seperation of duties', 'the principle that no user should be given enough privileges to misuse the system on their own'),
+            ('assurance', 'the amount of confidence that an organisation has that its controls satisfy necessary security requirements'),
+            ('non-repudiation', 'the ability to prove that an event occurred'), 
+            ('fail secure', 'disconnecting a system if an event occurs'),
+            ('an accidental threat', ['human error', 'malfunctions', 'fire','flood']),
+            ('a deliberate threat', ['ransomeware', 'malware', 'shoulder surfing']),
+            ('Privacy', ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
+            (['Intellectual Property', 'IP'], ['the legal rights which result from activity in the industrial, scientific, literary and artistic fields']),
+            (['DevSecOps'], ['an approach to culture, automation, and platform design that integrates security as a shared responsibility throughout the entire IT lifecyclemm']),
+            (['need to know basis'], ['preventing staff from attaining skills accross an entire process and thereby rendering it vulnerable']),
+            ('Links to vendor agnostic websites specific to information security', 'Useful additions to a security training programme for all staff members'),
+            ('All the agreed security requirements of each party', 'a third party connection contract should specify this'),
+    
         ),
-        'incorrect': (
-            f'a router is a layer {randint(1,2)} networking device',
-            f'a router is a layer {randint(4,7)} networking device',
-            'a router routes network traffic between one MAC address and another',
-            'a router only routes traffic from a public to a private network',
-            'a switch connects using IP address',
-            'all switches are managed',
-            'all switches are unmanaged',
-            f'modern firewalls work only at layer {randint(1,2)} of the OSI model',
-            'firewalls are only physical',
-            'firewalls are only software based',
-            'firewalls allow or deny traffic based on AUP',
-            'firewall rules are always based on application protocols',
-            'firewall rules are always based on port number',
-            'firewall rules are always based on content',
-            'firewall rules are always based on IP address',
-            'firewall rules can not be based on content',
-        ),
+        
+        'fillers': (
+            (['sales', 'marketing', 'Pre-exploit vulnerability management','PE/VM'], ['arpa testing', 'yellow box testing', 'red box testing', 'dns testing'])
+        )
     },
+    
     'acceptable use policy':{
         'question':'which of the following is PLACEHOLDER part of the process flow on building an acceptable usage policy?',
         'type':'correct incorrect',
