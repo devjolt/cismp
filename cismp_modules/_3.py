@@ -6,7 +6,7 @@ questions = {
     'uk_government_data_classifications_in_order':uk_government_data_classifications_in_order,
 
     'UK government data classifications': {
-        'question':'Which of the following statements is PLACEHOLDER a UK government data classification?',
+        'question':'Which of the following is PLACEHOLDER a UK government data classification?',
         'question_type':'correct incorrect',
         'positive':'',
         'negative':'not',
