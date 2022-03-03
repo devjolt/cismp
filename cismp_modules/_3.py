@@ -73,7 +73,7 @@ questions = {
             (['ISACA', 'Information Systems Audit and Control Association'], [' international professional association focused on IT governance']),
             (['SABSA', 'Sherwood Applied Business Security Architecture'], ['a framework and methodology for enterprise security architecture and service management']),
             (['OWASP', 'The Open Web Application Security Project'], ['an online community that produces freely-available articles, methodologies, documentation, tools, and technologies in the field of web application security']),
-            (['DevSecOps'], ['an approach to culture, automation, and platform design that integrates security as a shared responsibility throughout the entire IT lifecyclemm']),
+            (['DevSecOps'], ['an approach to culture, automation, and platform design that integrates security as a shared responsibility throughout the entire IT lifecycle']),
             (['BS25999-1'], ['general guidance on the processes, principles and terminology']),
             (['BS25999-2'], ['a set of requirements for implementing, operating and improving a BCM System']),
             (['BS25777'], ['the collection andanalysis of information that is gathered from public sources']),
@@ -117,7 +117,7 @@ questions = {
             (['SABSA', 'Sherwood Applied Business Security Architecture'], ['a framework and methodology for enterprise security architecture and service management']),
             (['BS25999-1'], ['general guidance on the processes, principles and terminology']),
             (['BS25999-2'], ['a set of requirements for implementing, operating and improving a BCM System']),
-            (['BS25777'], ['the collection andanalysis of information that is gathered from public sources']),
+            (['BS25777'], ['the collection and analysis of information that is gathered from public sources']),
             (['ISO/IEC 27017'], ['the standards relating to practice for information security controls for cloud sevices']),
             (['ISO 31000'], ['an information risk management standard for any industry']),
             (['ISO 9001'], ['a quality manament standard']),
@@ -201,8 +201,8 @@ questions = {
             ),
         'fillers': ()
     },
-    'the steering commitee should consist of': {
-        'question':'What should a security policy be within an organisation?',
+    'security policy within an organisation': {
+        'question':'What should a security policy PLACEHOLDER be within an organisation?',
         'question_type':'correct incorrect',
         'positive':'',
         'negative':'not',
@@ -213,7 +213,7 @@ questions = {
         'incorrect': (
             'discretionary',
             'optional',
-            'advirosry',
+            'advisory',
             'implemented where possible',
         ),
     },
