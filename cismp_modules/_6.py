@@ -127,7 +127,7 @@ questions = {
         'course_code':'6',
         'pairs':(
             (['man in the middle','MitM'],[f"involves {utl.pick_one(['spoofing', 'poisoning'])} name resolution systems", f"may involve {utl.pick_one(['spoofing', 'poisoning'])} {utl.pick_one(['DNS', 'domain name server', 'ARP', 'NetBios','WINS'])}"]),
-            (['DoS', 'DDos'],['involves flooding an address with messages', 'overwhelming an address with requests']),
+            (['DoS', 'DDos'],['involves flooding an address with messages', 'overwhelming an address with requests', 'unauthorised withholding of information or resources']),
             ('spoofing', ['falsifying network data to undermine a system', f"may be used for {utl.pick_one(['replay attacks', 'SPAM', 'WAP attacks'])}"]),
             ('spam', 'sending unsolicited communication'),
             ('spim', 'using SMS services to get people to displose their data'),

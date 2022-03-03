@@ -5,12 +5,18 @@ def ip_address(length = 4):
     return '.'.join([str(randint(0, 255)) for i in range(length)])
 
 questions = {
+    'aaa_in_order':aaa_in_order,
     'terms': {
         'question_with_0':'Which best describes the following: PLACEHOLDER?',
         'question_with_1':'What best describes the following: PLACEHOLDER?',
         'type':'pairs',
         'course_code':'',
         'pairs':(
+            ('An awareness campaign', 'The most cost-effective way of stopping the sharing of passwords by users'),
+            ('employees', 'the leading source of computer crime losses'),
+            ('Authorization', 'determines who is trusted for a given purpose'),
+            ('audit trails ', 'required in order to provide accountability'),
+            ('people', 'weakest link in a security system'),
             ('Errors','Most security breaches caused by employees are through'),
             ('security policy','sets out the organisation\’s formal stance on security for staff and contractors to see'),
             ('Objective evidence', 'Information which can be proved true through observation, documents, records, orpersonal interview'),
@@ -80,6 +86,107 @@ questions = {
             f'using a smartcard to access a server room',
             'requiring a pin number and RFID tag to access data on a USB drive',
             'needing to complete a capcha and enter a secret phrase to access part of a system'
+        ),
+    },
+    'accountability, authorisation and authentication': {
+        'question_with_0':'When a user PLACEHOLDER, which of the following aspects is the system ensuring?',
+        'question_with_1':'Which of the following demonstrates PLACEHOLDER?',
+        'type':'pairs',
+        'course_code':'',
+        'pairs':(
+            ('accountability',['has to sign a price of equipment out', 'notifies stores that they are borrowing a laptop']),
+            ('authorisation',['is granted access rights to part of a network', 'is granted access rights to a directory', 'is granted access rights to an application', 'determines who is trusted for a given purpose']),
+            ('authentication',['logs onto a computer system and is asked for their mother’s maiden name','completes a capcha', 'is required to scan an id card to gain access']),
+        ),
+        
+        'fillers': (
+            (['integrity','confidentiality','availability'],['wears safety shores whilst on site', 'uses their computer to check personal emails', 'ensures that their laptop is charged with the correct charger']),
+        )
+    },
+    'controls':{
+        'question':'Controls are PLACEHOLDER implemented to:',
+        'type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'Mitigate risk',
+            'Reduce the potential for loss',
+        ),
+        'incorrect': (
+            f'Eliminate risk',
+            f'Eliminate the potential for loss',
+            'Mitigate likelihood',
+            'Mitigate a threat',
+            'Eliminate a threat'
+        ),
+    },
+    'controls classifications':{
+        'question':'Which of the following security controls is classified by PLACEHOLDER?',
+        'type':'correct incorrect',
+        'positive':'function',
+        'negative':'type',
+        'course_code':'',
+        'correct':(
+            'preventative',
+            'protective',
+            'detective'
+            'deterrant',
+            'recovery',
+            'compensating'
+        ),
+        'incorrect': (
+            'physical', 
+            'technical', 
+            'administrative'
+        ),
+    },
+
+    'controls classifications':{
+        'question':'Which of the following are PLACEHOLDER classified as security controls by function?',
+        'type':'correct incorrect',
+        'positive':'function',
+        'negative':'type',
+        'course_code':'',
+        'correct':(
+            'preventative',
+            'protective',
+            'detective'
+            'deterrant',
+            'recovery',
+            'compensating'
+        ),
+        'incorrect': (
+            'physical', 
+            'technical', 
+            'administrative'
+            'nuclear',
+            'software',
+            'hardware',
+        ),
+    },
+
+    'controls classifications':{
+        'question':'Which of the following are PLACEHOLDER classified as security controls by type?',
+        'type':'correct incorrect',
+        'positive':'function',
+        'negative':'type',
+        'course_code':'',
+        'correct':(
+            'physical', 
+            'technical', 
+            'administrative',
+        ),
+        'incorrect': (
+            'preventative',
+            'protective',
+            'detective'
+            'deterrant',
+            'recovery',
+            'compensating',
+            'nuclear',
+            'software',
+            'hardware',
         ),
     },
 }

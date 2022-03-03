@@ -11,6 +11,10 @@ questions = {
         'type':'pairs',
         'course_code':'',
         'pairs':(
+            ('impact', 'the result of a security incident'),
+            ('risk assessment','an essential first step in contingency planning'),
+            ('risk management', 'process of reducing risk to an acceptable level'),
+            ('very low risks', 'can be ignored'),
             ('threat', 'action or event with an unwanted consequence'),
             ('risk', 'likelihood multiplied by impact'),
             ('impact', ['measurement of the consequences of an event happening', 'measured in terms of CIA']),
@@ -46,6 +50,7 @@ questions = {
         'course_code':'',
         'pairs':(
             ('seperation of duties', 'the principle that no user should be given enough privileges to misuse the system on their own'),
+            ('vulnerability', 'absence of a safeguard that could be exploited'),
             ('assurance', 'the amount of confidence that an organisation has that its controls satisfy necessary security requirements'),
             ('non-repudiation', 'the ability to prove that an event occurred'), 
             ('fail secure', 'disconnecting a system if an event occurs'),
@@ -55,7 +60,6 @@ questions = {
             ('improved resilience against and recovery time from a harmful incident', 'the primary benefit of implementing appropriate information security within an organisation'),
             ('an accidental threat', ['human error', 'malfunctions', 'fire','flood']),
             ('a deliberate threat', ['ransomeware', 'malware', 'shoulder surfing']),
-            (['Open Source Intelligence', 'OSINT'], 'the collection andanalysis of information that is gathered from public sources'),
             ('the MOST IMPORTANT role of senior management in regard to information security', 'Providing visible and material support for information security within the organisation'),
             ('Privacy', ['the protection of personal data','restrictions on monitoring, surveillance and communications interception']),
             ('need to know basis', 'preventing staff from attaining skills accross an entire process and thereby rendering it vulnerable'),
@@ -222,6 +226,78 @@ questions = {
             'terminate'
         ),
     },
+    'responses to risk correct incorrect': {
+        'question':f"A conpany conducts a risk assessment and discovers that the key risks relate to {utl.pick_one(['confidential records','cloud data storage','processing customer data'])}? Part of BEST policy for managing this discovery is PLACHOLDER:",
+        'type':'correct incorrect',
+        'positive':'',
+        'negative':'never',
+        'course_code':'',
+        'correct':(
+            'decide what residual risk is acceptable',
+            'implement controls to achieve acceptable risk level', 
+            ),
+        'incorrect': (
+            'encrypt all records',
+            'implement a solution based on the minium justified investment',
+            'implement a solution based on ease of implementation',
+            'report risk to ICO',
+            'report risk to GDPR', 
+            'fully implement ISO 27000 to mitigate risk',
+            'fully implement ISO 27001 to mitigate risk',
+            'fully implement ISO 27002 to mitigate risk',
+            'fully implement ISO 27003 to mitigate risk',
+            'fully implement GDPR to mitigate risk',
+        ),
+    },
+    'the steering commitee should consist of': {
+        'question':'What should a security policy be within an organisation?',
+        'question_type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'mandatory',
+        ),
+        'incorrect': (
+            'discretionary',
+            'optional',
+            'advirosry',
+            'implemented where possible',
+        ),
+    },
+    'who is accountable': {
+        'question_with_0':'Who is accountable for PLACEHOLDER?',
+        'question_with_1':'PLACEHOLDER is accountable for:?',
+        'type':'pairs',
+        'course_code':'',
+        'pairs':(
+            (['information assets','deciding how often data is backed up'], 'data owner'),
+            (['investing in security','providing visible and material support for information security within the organisation'], 'senior management'),
+            ('managing threats and vulnerabilities', 'risk owner'),
+            ('the day-to-day management of assets', 'asset owner'),
+            ('writing a security policy', 'CISO'),
+            ('every connection to a third party', 'connection owner'),
+            ('organise security', 'department managers'),
+        ),
+        'fillers': (['ordering new equipment','maintaining a balance of expenditure'], ['the IT team', 'the IT manager']),
+    },
+    'third pary access': {
+        'question':'Which of the folling is PLACEHOLDER why third party access should be controlled?',
+        'question_type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'they might introduce malicious code',
+            'they might access critical buisness systems',
+        ),
+        'incorrect': (
+            'they might use more than their allotted resources',
+            'they may access their own data',
+            'they may deny damaging your system',
+        ),
+    },
+    
 }
 
 """

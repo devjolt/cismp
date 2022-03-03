@@ -59,10 +59,14 @@ questions = {
         'type':'pairs',
         'course_code':'',
         'pairs':(
+
+            ('The Turnbull Report', 'The document that describes a risk based approach to establishing a system of internal control and reviewing effectiveness'),
+            ('Accreditation', 'independent process by which organisations can show they have met the requirements of ISO/IEC27001:2015'),
             (['Intellectual Property', 'IP'], ['the legal rights which result from activity in the industrial, scientific, literary and artistic fields']),
-            (['ISO/IEC 27001'], ['a specification for an Information Security Management System']),
+            (['ISO/IEC 27001'], ['a specification for an Information Security Management System', 'provides best practise recommendations on information security management']),
             (['ISO/IEC 27002'], ['information Security Management System implementation guidance']),
             (['ISO/IEC 15408'], ['the standards relating to the certification of security products']),
+            (['ISO/IEC 13335'], ['addresses the general management issues that are essential to the successful planning, implementation and operation of IT security','international standard deals with the management of IT security, focusing on the technical security control measures']),
             (['ISO/IEC 24762', 'BS2577'], ['the standards relating to disaster recovery']),
             (['ISO/IEC 22301'], ['the standards relating to business continuity']),
             (['NIST 800-53'], ['provides a catalog of security and privacy controls for all U.S. federal information systems except those related to national security']),
@@ -105,7 +109,7 @@ questions = {
         'course_code':'',
         'pairs':(
             (['ISO/IEC 27001'], ['a specification for an Information Security Management System']),
-            (['ISO/IEC 27002'], ['information Security Management System implementation guidance']),
+            (['ISO/IEC 27002'], ['information Security Management System implementation guidance', 'information security code of practice']),
             (['ISO/IEC 15408'], ['the standards relating to the certification of security products']),
             (['ISO/IEC 24762', 'BS2577'], ['the standards relating to disaster recovery']),
             (['ISO/IEC 22301'], ['the standards relating to business continuity']),
@@ -140,8 +144,28 @@ questions = {
         ),
     },
 
+    'why top secret': {
+        'question':'Why would a document be classified as top secret?',
+        'question_type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'so that users understand the level of confidentiality',
+            'so that users understand how to use the document',
+            'so that users understand how to dispose of the document',
+        ),
+        'incorrect': (
+            'so that users know they must lock it away when not being used',
+            'so that users know that leaving it out will be violating a clear desk policy',
+            'so that users understand that it is only to be viewed by senior management',
+            'so that users undestand how to encrypt the document',
+            'so that users can confirm the hash',
+        ),
+    },
+
     'the steering commitee should consist of': {
-        'question':'Regarding security frameworks, which of the following statements is PLACEHOLDER accurate?',
+        'question':'Which of the following does PLACEHOLDER need to be on a steering committee?',
         'question_type':'correct incorrect',
         'positive':'',
         'negative':'not',
@@ -177,6 +201,23 @@ questions = {
             ),
         'fillers': ()
     },
+    'the steering commitee should consist of': {
+        'question':'What should a security policy be within an organisation?',
+        'question_type':'correct incorrect',
+        'positive':'',
+        'negative':'not',
+        'course_code':'',
+        'correct':(
+            'mandatory',
+        ),
+        'incorrect': (
+            'discretionary',
+            'optional',
+            'advirosry',
+            'implemented where possible',
+        ),
+    },
+    
 }
 
 """

@@ -3,7 +3,6 @@ from . import views
 from .cismp_modules import _1, _2, _3, _4, _5, _6, _7, _8, _9
 from .views import HomeView, RandomModuleView
 
-
 urlpatterns = [
     path('', HomeView.as_view(), name='cismp_home'),
     path('random/', RandomModuleView.as_view(modules = (_1, _2, _3, _4, _5, _6, _7, _8, _9)), name = 'all_random'),
