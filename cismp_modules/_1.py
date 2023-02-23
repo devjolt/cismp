@@ -165,7 +165,7 @@ questions = {
     },
 
     'cloud service contract': {
-        'question':'When setting up a contract with a supplier for hosting cloud services, which of the following safeguards is PLACEHOLDER important?',
+        'question':'When setting up a contract with a cloud services supplier, which of the following safeguards is PLACEHOLDER important?',
         'type':'correct incorrect',
         'positive':'most',
         'negative':'not',
@@ -183,7 +183,7 @@ questions = {
     },
     'integrity, availability and accountability': {
         'question_with_0':'Which of the following best describes PLACEHOLDER?',
-        'question_with_1':'If PLACEHOLDER is important, which of the following would be used to ensure this is covered effectively?',
+        'question_with_1':'If PLACEHOLDER is important, which of the following would be the priority?',
         'type':'pairs',
         'course_code':'',
         'pairs':(
@@ -234,9 +234,6 @@ questions = {
             'Accounts should be closed if not accessed for 24 hours'
         ),
     },
-
-
-
 
 }
 

@@ -1,11 +1,16 @@
-from django.views.generic.base import TemplateView
-from django.shortcuts import render
+import logging
 from random import randint, shuffle
-
 import time
 
-from .cismp_modules import _1, _3, _4#, _2, _3
+from django.http import HttpResponseRedirect
+from django.shortcuts import redirect, render
+from django.views.generic.base import TemplateView
+
+from .cismp_modules import _1, _2, _3, _4, _5, _6, _7, _8, _9
 from cismp.utilities import utilities as utl
+
+logging.basicConfig(filename='cismp_question_logger.log', encoding='utf-8', level=logging.ERROR)
+logging.disable(logging.INFO)
 
 class HomeView(TemplateView):
     template_name = "cismp/home.html"
@@ -62,6 +67,8 @@ class RandomModuleView(TemplateView):
             #print('question:', question)
         
         shuffle(items)
+        context['url'] = self.request.path
+        context['module'] = f"{str(module)[-6]}"
         context['question'], context['items'] = template_question, items
         context['question_type'] = question_type
         context['key'] = key
@@ -84,5 +91,17 @@ def test_question(request):
         }
     return render(request, 'cismp/multichoice.html', context)
 
-
-
+def log_problem(request):
+    # post question details through
+    # problem should include module, question key, question text and answer text
+    # should get saved to a log
+    other = request.POST.get('other')
+    problem = request.POST.get('problem') if other == "" else other
+    from_url = request.POST.get('url')
+    module = request.POST.get('module')
+    key = request.POST.get('key')
+    question_type = request.POST.get('question_type')
+    question = request.POST.get('question')
+    items = request.POST.get('items')
+    logging.error(f"{problem} {module}, {key} ({question_type}): {question} - {items}")
+    return HttpResponseRedirect(from_url)

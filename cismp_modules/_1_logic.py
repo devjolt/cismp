@@ -4,7 +4,7 @@ from random import randint, shuffle
 
 def example():
     question=[
-        {'text':'How much is that doggy in the window (test question)?'}
+        {'text':'How much is that doggy in the window (system test question)?'}
     ]
     
     items=[

@@ -1,7 +1,7 @@
 from django.urls import path, include
 from . import views
 from .cismp_modules import _1, _2, _3, _4, _5, _6, _7, _8, _9
-from .views import HomeView, RandomModuleView
+from .views import HomeView, RandomModuleView, log_problem
 
 urlpatterns = [
     path('', HomeView.as_view(), name='cismp_home'),
@@ -15,4 +15,5 @@ urlpatterns = [
     path('physical_and_environmental_security/', RandomModuleView.as_view(modules = (_7,)), name = 'physical_and_environmental_security'),
     path('disaster_recovery_and_business_continuity_management/', RandomModuleView.as_view(modules = (_8,)), name = 'disaster_recovery_and_business_continuity_management'),
     path('cryptography/', RandomModuleView.as_view(modules = (_9,)), name = 'files_os'),
+    path('log_problem/', log_problem, name='log_problem'),
 ] 
