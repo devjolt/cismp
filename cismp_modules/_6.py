@@ -39,7 +39,7 @@ questions = {
         )
     },
     'Network devices': {
-        'question':'which of the following is PLACEHOLDER?',
+        'question':'Which of the following is PLACEHOLDER?',
         'type':'correct incorrect',
         'positive':'true',
         'negative':'false',

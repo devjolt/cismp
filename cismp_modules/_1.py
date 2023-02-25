@@ -103,7 +103,7 @@ questions = {
         ),
     },
     'confientiality integrity': {
-        'question':'Which of the following techniques can be used to ensure PLACEHOLDER?',
+        'question':'Which of the following CIA principles can be applied to ensure PLACEHOLDER?',
         'type':'correct incorrect',
         'positive':'confidentiality',
         'negative':'integrity',
@@ -123,7 +123,7 @@ questions = {
         ),
     },
     'confientiality availability': {
-        'question':'Which of the following techniques can be used to ensure PLACEHOLDER?',
+        'question':'Which of the following CIA techniques can be used to ensure PLACEHOLDER?',
         'type':'correct incorrect',
         'positive':'confidentiality',
         'negative':'availability',
@@ -145,7 +145,7 @@ questions = {
     
     },
     'integrity availability': {
-        'question':'Which of the following techniques can be used to ensure PLACEHOLDER?',
+        'question':'Concidering the CIA triad, which of the following techniques can be used to ensure PLACEHOLDER?',
         'type':'correct incorrect',
         'positive':'integrity',
         'negative':'availability',

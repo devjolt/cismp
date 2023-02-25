@@ -4,7 +4,7 @@ from cismp.utilities import utilities as utl
 
 def ca_certificates():
     num_choices=4
-    question_text='What are the stages in obtaining a certificate from PLACEHOLDER?'
+    question_text='What are the stages in obtaining an SSL certificate from PLACEHOLDER?'
     ascending_order, descending_order='first to last', 'last to first'
     correct_list=[
         'client requests certificate from CA, providing public key and proof of id',
