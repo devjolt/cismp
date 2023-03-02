@@ -103,5 +103,5 @@ def log_problem(request):
     question_type = request.POST.get('question_type')
     question = request.POST.get('question')
     items = request.POST.get('items')
-    logging.error(f"{problem} {module}, {key} ({question_type}): {question} - {items}")
+    logging.error(f"CISMP {problem} {module}, {key} ({question_type}): {question} - {items}")
     return HttpResponseRedirect(from_url)
