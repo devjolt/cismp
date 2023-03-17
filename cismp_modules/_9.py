@@ -6,7 +6,7 @@ questions = {
     
     'operational controls': {
         'question_with_0':'Which of the following is an operational control related to PLACEHOLDER?',
-        'question_with_1':'Which operational control is PLACEHOLDER?',
+        'question_with_1':'Which operational control describes PLACEHOLDER?',
         'type':'pairs',
         'course_code':'5',
         'pairs':(
@@ -242,7 +242,7 @@ questions = {
             'uses digital certificates as a means of distributing public keys',
             'certificates are issed by certificate authorities which are trusted third parties',
             'allows two users with certificates to trust each other',
-            'basis of e-commerce',
+            'it is the basis of e-commerce',
             'heirarchical model',
             'bridge model',
             'certificates can be revoked if it is compromised',

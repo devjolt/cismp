@@ -171,7 +171,7 @@ questions = {
         'negative':'not',
         'course_code':'',
         'correct':(
-            'The ability to recover all information from the cloud if the contract isterminated',
+            'The ability to recover all information from the cloud if the contract is terminated',
             'The confidentiality and integrity of downloading information from the cloud',
             'The service level requirement for availability of the information'
         ),

@@ -47,9 +47,9 @@ questions = {
         'type':'pairs',
         'course_code':'7',
         'pairs':(
-            ('preventative', ['Checking references for job applicants','A staffed reception area','A non-disclosure agreement', 'Locking windows','Being aware of tailgating', 'Keeping desks clear', 'Locking sensitive areas', 'Securely disposing of waste', 'A Clean desk policy', 'Being wary of shoulder surfing', 'Securing devices to a desk', 'Antivirus not allowing malware to be downloaded', 'background checks for job applicants', 'clear desk policy', 'security guards patroling a perimeter']),
+            ('preventative', ['Checking references for job applicants','A staffed reception area','A non-disclosure agreement', 'A locking window','Being aware of tailgating', 'Keeping desks clear', 'Locking sensitive areas', 'Securely disposing of waste', 'A Clean desk policy', 'Being wary of shoulder surfing', 'Securing devices to a desk', 'Antivirus not allowing malware to be downloaded', 'background checks for job applicants', 'clear desk policy', 'security guards patroling a perimeter']),
             ('detective', ['An intruder alarm', 'Use of smart water to spray people in sesitive areas', 'Antivirus running checks on a system to identify malware']),
-            ('reactive', ['An electrified fences','Antivirus removing malware', 'Deactivating lost devices', 'taking legal action']),
+            ('reactive', ['An electrified fence','Antivirus removing malware', 'Deactivating lost devices', 'taking legal action']),
             
         ),
         'fillers': (
