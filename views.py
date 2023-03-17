@@ -1,5 +1,7 @@
+import json
 import logging
 from random import randint, shuffle
+import re
 import time
 
 from django.http import HttpResponseRedirect
@@ -15,10 +17,10 @@ logging.disable(logging.INFO)
 
 cismp_logger = logging.getLogger(__name__) # custom logger
 
-cismp_handler = logging.FileHandler('cismp_logger_new.log') # handler
+cismp_handler = logging.FileHandler('cismp_question_feedback.log') # handler
 cismp_handler.setLevel(logging.ERROR)
 
-cismp_format = logging.Formatter('%(asctime)s - %(name)s - %(message)s') # formatting
+cismp_format = logging.Formatter('%(asctime)s - %(message)s') # formatting
 cismp_handler.setFormatter(cismp_format)
 
 cismp_logger.addHandler(cismp_handler) # add formatting to handler
@@ -114,6 +116,14 @@ def log_problem(request):
     key = request.POST.get('key')
     question_type = request.POST.get('question_type')
     question = request.POST.get('question')
+    
     items = request.POST.get('items')
-    cismp_logger.error(f"{problem} {module}, {key} ({question_type}): {question} - {items}")
+    items = re.sub('\'', '"', items)
+    items = json.loads(items)
+    items_str = ''
+    for item in items:
+        items_str+= ('\n\t'+str(item))
+        
+    cismp_logger.error(f"{problem}: Module {module}, {key} ({question_type}):\n\t{question}{items_str}")
+    
     return HttpResponseRedirect(from_url)
