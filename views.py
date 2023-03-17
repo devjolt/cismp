@@ -15,15 +15,6 @@ logging.basicConfig(filename='cismp_question_logger.log', encoding='utf-8', leve
 logging.disable(logging.INFO)
 """
 
-cismp_logger = logging.getLogger(__name__) # custom logger
-
-cismp_handler = logging.FileHandler('cismp_question_feedback.log') # handler
-cismp_handler.setLevel(logging.ERROR)
-
-cismp_format = logging.Formatter('%(asctime)s - %(message)s') # formatting
-cismp_handler.setFormatter(cismp_format)
-
-cismp_logger.addHandler(cismp_handler) # add formatting to handler
 
 
 class HomeView(TemplateView):
@@ -105,6 +96,18 @@ def test_question(request):
         }
     return render(request, 'cismp/multichoice.html', context)
 
+#====================#
+#for logging feedback#
+#====================#
+def make_logger(logger_name, logging_filename):
+    logger = logging.getLogger(logger_name) # custom logger
+    handler = logging.FileHandler(logging_filename) # handler
+    handler.setLevel(logging.ERROR)
+    custom_format = logging.Formatter('%(asctime)s - %(message)s') # formatting
+    handler.setFormatter(custom_format)
+    logger.addHandler(handler) # add formatting to handler
+    return logger
+
 def log_problem(request):
     # post question details through
     # problem should include module, question key, question text and answer text
@@ -123,7 +126,8 @@ def log_problem(request):
     items_str = ''
     for item in items:
         items_str+= ('\n\t'+str(item)) # each dict on a new line tabbed
-        
-    cismp_logger.error(f"{problem}: Module {module}, {key} ({question_type}):\n\t{question}{items_str}")
+    
+    logger = make_logger('cismp','cismp_question_feedback.log')    
+    logger.error(f"{problem}: Module {module}, {key} ({question_type}):\n\t{question}{items_str}")
     
     return HttpResponseRedirect(from_url)
