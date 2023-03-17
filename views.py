@@ -118,11 +118,11 @@ def log_problem(request):
     question = request.POST.get('question')
     
     items = request.POST.get('items')
-    items = re.sub('\'', '"', items)
-    items = json.loads(items)
+    items = re.sub('\'', '"', items) # replace ' with " to enable ...
+    items = json.loads(items) # str -> list of dicts
     items_str = ''
     for item in items:
-        items_str+= ('\n\t'+str(item))
+        items_str+= ('\n\t'+str(item)) # each dict on a new line tabbed
         
     cismp_logger.error(f"{problem}: Module {module}, {key} ({question_type}):\n\t{question}{items_str}")
     
