@@ -8,9 +8,21 @@ from django.views.generic.base import TemplateView
 
 from .cismp_modules import _1, _2, _3, _4, _5, _6, _7, _8, _9
 from cismp.utilities import utilities as utl
-
+"""
 logging.basicConfig(filename='cismp_question_logger.log', encoding='utf-8', level=logging.ERROR)
 logging.disable(logging.INFO)
+"""
+
+cismp_logger = logging.getLogger(__name__) # custom logger
+
+cismp_handler = logging.FileHandler('cismp_logger_new.log') # handler
+cismp_handler.setLevel(logging.ERROR)
+
+cismp_format = logging.Formatter('%(asctime)s - %(name)s - %(message)s') # formatting
+cismp_handler.setFormatter(cismp_format)
+
+cismp_logger.addHandler(cismp_handler) # add formatting to handler
+
 
 class HomeView(TemplateView):
     template_name = "cismp/home.html"
@@ -103,5 +115,5 @@ def log_problem(request):
     question_type = request.POST.get('question_type')
     question = request.POST.get('question')
     items = request.POST.get('items')
-    logging.error(f"CISMP {problem} {module}, {key} ({question_type}): {question} - {items}")
+    cismp_logger.error(f"{problem} {module}, {key} ({question_type}): {question} - {items}")
     return HttpResponseRedirect(from_url)
